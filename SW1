@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARNING: Your $750 Reward Expires at Midnight!</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .warning-header {
+            background: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .timer {
+            font-size: 24px;
+            color: #ff0000;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .benefit-box {
+            background: #fffacd;
+            border: 3px dashed #ff0000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .cta-button {
+            display: block;
+            background: #00ff00;
+            color: #000;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            border: 3px solid #000;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            background: #00cc00;
+            transform: scale(1.05);
+        }
+        .testimonial {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #00ff00;
+        }
+        .highlight {
+            background: #ffff00;
+            padding: 2px 5px;
+        }
+        .red-text {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .countdown {
+            font-size: 48px;
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-header">
+        ⚠️ URGENT: This Page Will Be Removed in <span id="header-timer">11:59:47</span> ⚠️
+    </div>
+
+    <div class="container">
+        <h1>ATTENTION: <span class="highlight">23 People in Your Area</span> Already Claimed Their $750 Reward Today...</h1>
+        
+        <h2 style="font-size: 24px; color: #ff0000; margin-bottom: 20px;">Will YOU Be Next, or Will You Let It Slip Away Forever?</h2>
+
+        <p style="font-size: 18px; margin-bottom: 20px;">Dear Friend,</p>
+
+        <p style="font-size: 18px; margin-bottom: 20px;">As you can see, I've put a <strong>GIANT RED WARNING</strong> at the top of this page.</p>
+
+        <p style="font-size: 18px; margin-bottom: 20px;">Why? To make a point.</p>
+
+        <p style="font-size: 18px; margin-bottom: 20px;">I'm going to show you—right here on this page—how to claim up to <span class="highlight">$750 in rewards</span> that major companies are DESPERATE to give away... but <span class="red-text">only if you act in the next 11 hours and 59 minutes!</span></p>
+
+        <div class="benefit-box">
+            <h3 style="font-size: 20px; margin-bottom: 10px;">HERE'S WHAT 31,847 SMART PEOPLE DISCOVERED LAST MONTH:</h3>
+            <ul style="font-size: 18px; margin-left: 20px;">
+                <li>✓ Amazon gift cards worth $500-$750</li>
+                <li>✓ Cash deposits straight to PayPal</li>
+                <li>✓ Walmart shopping sprees</li>
+                <li>✓ Target gift certificates</li>
+                <li>✓ And much, much more!</li>
+            </ul>
+        </div>
+
+        <div class="timer">
+            <div class="countdown" id="main-timer">11:59:47</div>
+            <p>Until This Offer Vanishes Forever</p>
+        </div>
+
+        <div class="testimonial">
+            <p><strong>"I thought it was too good to be true..."</strong></p>
+            <p>"...until the $750 Amazon gift card arrived in my email 3 days later. Now I check for new rewards every week!" - <em>Sarah M., Orlando, FL</em></p>
+        </div>
+
+        <p style="font-size: 18px; margin: 20px 0;"><strong>Listen:</strong> While you're reading this, <span class="highlight">someone else just claimed another reward.</span> That's one less opportunity for you.</p>
+
+        <p style="font-size: 18px; margin: 20px 0;">Major brands like Amazon, Walmart, and Target are giving away <strong>MILLIONS</strong> in rewards to get your opinion on new products. They NEED people like you.</p>
+
+        <p style="font-size: 18px; margin: 20px 0;">But here's the catch...</p>
+
+        <p style="font-size: 18px; margin: 20px 0;"><span class="red-text">They can only accept a limited number of participants each day.</span> And once today's spots are filled, that's it. You'll have to wait until tomorrow... <em>if there are any spots left.</em></p>
+
+        <a href="https://www.rdfs8a3trk.com/5GSPPN/Z1SG3W/?sub1={rt_ad}&sub2={clickid}&sub3={sub2}&sub4={rt_adgroup}&sub5={rt_campaign}&placement=rewards-expiring-tonight" class="cta-button">
+            CLAIM MY $750 REWARD NOW →
+        </a>
+
+        <p style="text-align: center; font-size: 16px; color: #666;">Only 7 Spots Remaining for Your Area</p>
+
+        <div class="testimonial">
+            <p><strong>"Got $500 to Walmart last Tuesday!"</strong></p>
+            <p>"Used it to buy groceries for the month. Can't believe companies pay this much just for opinions!" - <em>Mike D., Phoenix, AZ</em></p>
+        </div>
+
+        <p style="font-size: 18px; margin: 20px 0;"><strong>WARNING:</strong> I can't keep this page up much longer. My agreement with these companies expires at midnight, and I'm legally required to take it down.</p>
+
+        <p style="font-size: 18px; margin: 20px 0;">Don't be one of those people who sees this tomorrow and kicks themselves for missing out on <span class="highlight">$750 in free rewards.</span></p>
+
+        <a href="https://www.rdfs8a3trk.com/5GSPPN/Z1SG3W/?sub1={rt_ad}&sub2={clickid}&sub3={sub2}&sub4={rt_adgroup}&sub5={rt_campaign}&placement=rewards-expiring-tonight" class="cta-button">
+            YES! RESERVE MY SPOT NOW →
+        </a>
+
+        <p style="text-align: center; font-size: 14px; color: #666; margin-top: 30px;">
+            This opportunity is 100% legitimate and endorsed by major retailers<br>
+            No credit card required • No hidden fees • Just honest rewards for your time
+        </p>
+    </div>
+
+    <script>
+        // Timer countdown
+        let hours = 11;
+        let minutes = 59;
+        let seconds = 47;
+
+        function updateTimer() {
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    if (hours < 0) {
+                        hours = 0;
+                        minutes = 0;
+                        seconds = 0;
+                    }
+                }
+            }
+
+            const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('main-timer').textContent = timeString;
+            document.getElementById('header-timer').textContent = timeString;
+
+            if (hours === 0 && minutes === 0 && seconds === 0) {
+                clearInterval(timerInterval);
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
