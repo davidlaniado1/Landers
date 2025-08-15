@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $750 Walmart Gift Card</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 32px;
+            color: #0071ce;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .gift-card-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .qualification-section {
+            background-color: #fff3cd;
+            border: 2px solid #ffeeba;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .qualification-question {
+            font-size: 24px;
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ffc220;
+            color: #000;
+            padding: 18px 60px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cta-button:hover {
+            background-color: #ffb700;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .testimonials {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .testimonials h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0071ce;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .testimonial-header {
+            font-weight: bold;
+            color: #0071ce;
+            margin-bottom: 5px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+        }
+        .urgency {
+            background-color: #dc3545;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px -20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        .disclaimer {
+            font-size: 11px;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            line-height: 1.4;
+        }
+        .limited-spots {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Claim Your $750 Walmart Gift Card Today!</h1>
+            <p style="font-size: 18px; color: #666;">Complete a Quick Survey to Qualify</p>
+        </div>
+
+        <img src="https://i.imgur.com/walmart-gift-card-750.jpg" alt="$750 Walmart Gift Card" class="gift-card-image">
+
+        <div class="limited-spots">
+            ⚠️ Only 47 Gift Cards Remaining for Your Area!
+        </div>
+
+        <div class="qualification-section">
+            <div class="qualification-question">
+                Do You Shop at Walmart at Least Once a Month?
+            </div>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">YES - Start Survey →</a>
+        </div>
+
+        <div class="urgency">
+            ⏰ OFFER EXPIRES TONIGHT AT 11:59 PM ⏰
+        </div>
+
+        <div class="testimonials">
+            <h2>What Recent Winners Are Saying:</h2>
+            
+            <div class="testimonial">
+                <div class="testimonial-header">Sarah M. - Phoenix, AZ</div>
+                <div class="testimonial-text">"I couldn't believe it was real until the gift card arrived in my email 2 days later. Used it for my grocery shopping!"</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-header">Robert K. - Dallas, TX</div>
+                <div class="testimonial-text">"The survey took about 5 minutes. Got my $750 card and bought a new TV. Still have money left over!"</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-header">Linda T. - Atlanta, GA</div>
+                <div class="testimonial-text">"My friend told me about this. We both got our cards! Perfect timing for back-to-school shopping."</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">Check If You Qualify →</a>
+        </div>
+
+        <div class="disclaimer">
+            <p>© All Rights Reserved | www.exclusiveoffer.club</p>
+            <p>This Program is not sponsored by Facebook or Walmart. The trademarks and assets presented on this page are registered trademarks of their respective owners. There is no affiliation, association, or endorsement by such parties. We cannot guarantee that you will receive any of the offers requested, as offers are subject to availability. Offers distributed are limited in quantity. The third-party product names, logos, brands, and trademarks shown on this website are the property of their respective owners.</p>
+        </div>
+    </div>
+</body>
+</html>
