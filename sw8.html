@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Shopping Rewards: $750 Target Card Inside</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .floating-orbs {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.3), transparent);
+            animation: float-orb 20s infinite;
+        }
+        
+        .orb:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+            animation-duration: 25s;
+        }
+        
+        .orb:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            animation-duration: 20s;
+            animation-delay: 5s;
+        }
+        
+        .orb:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            animation-duration: 30s;
+            animation-delay: 10s;
+        }
+        
+        @keyframes float-orb {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(100px, -100px) scale(1.1);
+            }
+            66% {
+                transform: translate(-100px, 100px) scale(0.9);
+            }
+        }
+        
+        .tech-header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(79, 172, 254, 0.3);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ai-badge {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            animation: glow-badge 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow-badge {
+            0%, 100% { box-shadow: 0 0 10px rgba(79, 172, 254, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(79, 172, 254, 0.8); }
+        }
+        
+        .live-counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: pulse-dot 1s infinite;
+        }
+        
+        @keyframes pulse-dot {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .hero-section {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #fff, #4facfe, #00f2fe, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .ai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(79, 172, 254, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4facfe, transparent);
+            animation: scan 3s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #4facfe;
+            background: rgba(79, 172, 254, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+        
+        .gift-card-showcase {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 30px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-3d {
+            width: 350px;
+            height: 220px;
+            margin: 0 auto 40px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate3d 10s infinite linear;
+        }
+        
+        @keyframes rotate3d {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            backface-visibility: hidden;
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+        
+        .ai-analysis {
+            background: rgba(79, 172, 254, 0.1);
+            border: 2px solid #4facfe;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .analysis-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .ai-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .analysis-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .analysis-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .analysis-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00f2fe;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 25px 80px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 60px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(79, 172, 254, 0.4);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(79, 172, 254, 0.6);
+        }
+        
+        .testimonials {
+            margin: 60px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card::after {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(79, 172, 254, 0.2);
+        }
+        
+        .testimonial-card:hover {
+            background: rgba(79, 172, 254, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .user-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .badge-icon {
+            font-size: 1.5rem;
+            color: #00ff00;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(79, 172, 254, 0.3);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .card-3d {
+                width: 280px;
+                height: 180px;
+            }
+            
+            .cta-button {
+                padding: 20px 50px;
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="floating-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <header class="tech-header">
+        <div class="header-content">
+            <div class="ai-badge">🤖 AI-POWERED REWARDS</div>
+            <div class="live-counter">
+                <div class="live-dot"></div>
+                <span><strong>2,847</strong> active participants</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero-section">
+            <h1 class="hero-title">Welcome to the Future of Shopping Rewards</h1>
+            <p class="hero-subtitle">Our AI analyzes your shopping patterns to match you with the perfect $750 Target gift card opportunity</p>
+        </section>
+
+        <div class="ai-features">
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <h3 class="feature-title">Smart Matching Algorithm</h3>
+                <p>Our AI processes millions of data points to find the perfect rewards match for your shopping style</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Instant Qualification</h3>
+                <p>No waiting! Get results in under 60 seconds with our lightning-fast AI verification system</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <h3 class="feature-title">Secure & Private</h3>
+                <p>Military-grade encryption protects your data while our AI works its magic</p>
+            </div>
+        </div>
+
+        <div class="gift-card-showcase">
+            <div class="card-3d">
+                <div class="card-face">$750</div>
+                <div class="card-face card-back">TARGET</div>
+            </div>
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 20px;">Your AI-Selected Reward Awaits</h2>
+            <p style="text-align: center; font-size: 1.3rem; color: #b0b0b0;">Join thousands using AI to maximize their shopping power in 2025</p>
+        </div>
+
+        <div class="ai-analysis">
+            <div class="analysis-header">
+                <div class="ai-icon">🤖</div>
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 5px;">AI Market Analysis - August 2025</h3>
+                    <p style="color: #b0b0b0;">Real-time data from our shopping intelligence platform</p>
+                </div>
+            </div>
+            
+            <div class="analysis-grid">
+                <div class="analysis-item">
+                    <span class="analysis-value">92%</span>
+                    <small>Match Success Rate</small>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-value">17K+</span>
+                    <small>Cards Distributed</small>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-value">4.9★</span>
+                    <small>User Rating</small>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-value">< 60s</span>
+                    <small>Avg. Processing Time</small>
+                </div>
+            </div>
+        </div>
+
+        <section class="testimonials">
+            <h2 style="font-size: 3rem; text-align: center; margin-bottom: 20px;">AI Success Stories</h2>
+            <p style="text-align: center; font-size: 1.3rem; color: #b0b0b0; margin-bottom: 40px;">Real users, real rewards, powered by artificial intelligence</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <div class="user-avatar">TC</div>
+                        <div>
+                            <strong>Tech Charlie</strong><br>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"The AI matched me instantly! As someone who shops at Target for tech gadgets, this $750 is perfect for the new smart home setup I've been planning."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <div class="user-avatar">DM</div>
+                        <div>
+                            <strong>Digital Mom</strong><br>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"I love how the AI understood my shopping needs. With 3 kids and back-to-school season, this gift card is a game-changer!"</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <div class="user-avatar">SF</div>
+                        <div>
+                            <strong>Savvy Fashionista</strong><br>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"The future is here! Got matched in 45 seconds and already planning my Target haul. The AI even suggested the best departments for me!"</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Ready to Experience AI-Powered Rewards?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; color: #b0b0b0;">Let our intelligent system find your perfect $750 Target gift card match</p>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">Start AI Matching →</a>
+            
+            <div class="security-badges">
+                <div class="badge">
+                    <span class="badge-icon">✓</span>
+                    <span>SSL Encrypted</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">✓</span>
+                    <span>AI Verified</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">✓</span>
+                    <span>Instant Results</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 AI Shopping Rewards Platform | Powered by Advanced Machine Learning</p>
+        <p style="margin-top: 15px; font-size: 0.9rem;">Not affiliated with Target Corporation. This platform uses AI to match consumers with reward opportunities based on shopping preferences and market research participation.</p>
+    </footer>
+
+    <script>
+        // Animated counter
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function update() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start).toLocaleString();
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            }
+            
+            update();
+        }
+        
+        // Animate stats on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const valueElement = entry.target.querySelector('.analysis-value');
+                    const text = valueElement.textContent;
+                    if (text.includes('K')) {
+                        const num = parseFloat(text) * 1000;
+                        animateCounter(valueElement, num, 2000);
+                        setTimeout(() => {
+                            valueElement.textContent = text;
+                        }, 2100);
+                    }
+                }
+            });
+        });
+        
+        document.querySelectorAll('.analysis-item').forEach(item => {
+            observer.observe(item);
+        });
+        
+        // Update live counter
+        setInterval(() => {
+            const counter = document.querySelector('.live-counter strong');
+            const current = parseInt(counter.textContent.replace(',', ''));
+            const change = Math.floor(Math.random() * 10) - 3;
+            counter.textContent = (current + change).toLocaleString();
+        }, 5000);
+    </script>
+</body>
+</html>
