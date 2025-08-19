@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#TargetHaul: Join the $750 Gift Card Challenge</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #262626;
+            line-height: 1.6;
+        }
+        
+        /* TikTok-style header */
+        .social-header {
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ff0050, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .trending-badge {
+            background: #ff0050;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse-badge 2s infinite;
+        }
+        
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .flame-icon {
+            animation: flame 1s ease-in-out infinite;
+        }
+        
+        @keyframes flame {
+            0%, 100% { transform: scale(1) rotate(-5deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: move-grid 20s linear infinite;
+        }
+        
+        @keyframes move-grid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hashtag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 5px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Video Feed Style Section */
+        .feed-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .view-count {
+            color: #8e8e8e;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        /* Stories Grid */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .story-card {
+            position: relative;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .story-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .story-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+        }
+        
+        .story-info {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            color: white;
+        }
+        
+        .story-user {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .story-amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #00ff88;
+        }
+        
+        /* Main Content Card */
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #ff0050, #ff4500);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .gift-amount {
+            font-size: 5rem;
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .card-content {
+            padding: 40px;
+        }
+        
+        /* Social Proof Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #ff0050;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px #ffe0e6;
+        }
+        
+        .timeline-content {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 8px solid #f8f8f8;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-user {
+            font-weight: 600;
+            color: #262626;
+        }
+        
+        .timeline-time {
+            font-size: 0.9rem;
+            color: #8e8e8e;
+        }
+        
+        /* Interactive Elements */
+        .challenge-box {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .challenge-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .challenge-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .challenge-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #ff0050;
+            color: white;
+            padding: 20px 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 0, 80, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 0, 80, 0.4);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ff0050;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #262626;
+            color: #8e8e8e;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .social-link {
+            color: #8e8e8e;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .gift-amount {
+                font-size: 3.5rem;
+            }
+            
+            .stories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .story-card {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="social-header">
+        <div class="header-content">
+            <div class="logo">#TargetHaul</div>
+            <div class="trending-badge">
+                <span class="flame-icon">🔥</span>
+                TRENDING NOW
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The <span class="hashtag">#TargetHaul</span> Challenge is Going Viral!</h1>
+            <p style="font-size: 1.3rem; margin-top: 20px;">Join 46% of Gen Z shoppers discovering rewards through social shopping</p>
+            <div style="margin-top: 30px;">
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button" style="display: inline-block; background: #ff0050; color: white; padding: 18px 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 30px rgba(255, 0, 80, 0.3); transition: all 0.3s ease;">Join the Challenge Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="feed-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span>🛍️</span>
+                Recent #TargetHaul Winners
+            </h2>
+            <span class="view-count">2.3M views this week</span>
+        </div>
+
+        <div class="stories-grid">
+            <div class="story-card">
+                <div style="background: linear-gradient(135deg, #ff6b6b, #feca57); height: 100%;"></div>
+                <div class="story-gradient"></div>
+                <div class="story-info">
+                    <div class="story-user">@ShopWithSarah</div>
+                    <div class="story-amount">$750</div>
+                    <small>2 hours ago</small>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); height: 100%;"></div>
+                <div class="story-gradient"></div>
+                <div class="story-info">
+                    <div class="story-user">@TrendyTina</div>
+                    <div class="story-amount">$750</div>
+                    <small>5 hours ago</small>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div style="background: linear-gradient(135deg, #fa709a, #fee140); height: 100%;"></div>
+                <div class="story-gradient"></div>
+                <div class="story-info">
+                    <div class="story-user">@BargainHunter</div>
+                    <div class="story-amount">$750</div>
+                    <small>8 hours ago</small>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div style="background: linear-gradient(135deg, #a8edea, #fed6e3); height: 100%;"></div>
+                <div class="story-gradient"></div>
+                <div class="story-info">
+                    <div class="story-user">@StyleSeeker</div>
+                    <div class="story-amount">$750</div>
+                    <small>12 hours ago</small>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div style="background: linear-gradient(135deg, #ffecd2, #fcb69f); height: 100%;"></div>
+                <div class="story-gradient"></div>
+                <div class="story-info">
+                    <div class="story-user">@DealDiva</div>
+                    <div class="story-amount">$750</div>
+                    <small>1 day ago</small>
