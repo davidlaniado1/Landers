@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Big on Everything You Need - Exclusive Target Circle Benefit</title>
+    <title>Unlock a $750 Target Gift Card - Target Circle Member Exclusive</title>
     <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
     <style>
         * {
@@ -13,26 +13,94 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
             color: #333;
-            background: linear-gradient(135deg, #cc0000 0%, #ff6b6b 100%);
+            background: #fff;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
-        /* Hero Section - Above the Fold */
-        .hero {
-            background: linear-gradient(135deg, #cc0000 0%, #ff6b6b 100%);
+        /* Target Brand Colors & Style */
+        .target-red { background: #cc0000; }
+        .target-light-red { background: #e50000; }
+        .target-text-red { color: #cc0000; }
+
+        /* Header */
+        .header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #cc0000;
+        }
+
+        .target-bullseye {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #cc0000;
+            position: relative;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .target-bullseye::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .target-bullseye::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #cc0000;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .circle-badge {
+            background: #cc0000;
             color: white;
-            padding: 60px 0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            background: linear-gradient(135deg, #cc0000 0%, #e50000 100%);
+            color: white;
+            padding: 30px 0 40px;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
 
         .hero::before {
@@ -42,8 +110,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="target" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23target)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
         }
 
         .hero-content {
@@ -51,584 +118,566 @@
             z-index: 2;
         }
 
-        .urgency-badge {
-            background: #ffff00;
-            color: #cc0000;
-            padding: 8px 20px;
+        .exclusive-badge {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 8px 16px;
             border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: bold;
-            font-size: 14px;
             display: inline-block;
             margin-bottom: 20px;
-            animation: pulse 2s infinite;
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            letter-spacing: 0.5px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
         }
 
-        .hero h1 .highlight {
+        .hero .highlight {
             color: #ffff00;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .hero .subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-            opacity: 0.95;
-        }
-
-        .benefits-preview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .benefit-item {
-            background: rgba(255,255,255,0.15);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .benefit-item .icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .benefit-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+        .current-event {
+            background: rgba(255,255,0,0.15);
+            border: 2px solid #ffff00;
             color: #ffff00;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 20px 0;
+            display: inline-block;
         }
 
-        .cta-button {
-            background: linear-gradient(45deg, #ffff00, #ffd700);
-            color: #cc0000;
-            padding: 20px 40px;
-            font-size: 1.5rem;
+        .benefit-points {
+            margin: 25px 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .benefit-points li {
+            list-style: none;
+            padding: 8px 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .benefit-points li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffff00;
             font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* CTA Button - Mobile Optimized */
+        .cta-button {
+            background: linear-gradient(135deg, #ffff00 0%, #ffd700 100%);
+            color: #cc0000;
+            padding: 18px 35px;
+            font-size: 1.3rem;
+            font-weight: 900;
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin: 25px 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #ffd700, #ffff00);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
-        /* Trust Indicators */
-        .trust-bar {
-            background: rgba(255,255,255,0.1);
-            padding: 15px 0;
-            text-align: center;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
-
-        .trust-stats {
+        .trust-indicators {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin: 20px 0;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .trust-stat {
-            margin: 10px;
-        }
-
-        .trust-stat .number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffff00;
-        }
-
-        .trust-stat .label {
+        .trust-item {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            border-radius: 20px;
             font-size: 0.9rem;
-            opacity: 0.9;
+            font-weight: bold;
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
         }
 
-        /* Main Content */
+        /* Main Content - Target Style */
         .main-content {
-            background: white;
-            padding: 80px 0;
+            background: #f8f9fa;
+            padding: 50px 0;
         }
 
         .section {
-            margin-bottom: 60px;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #cc0000;
-        }
-
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .benefit-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-left: 5px solid #cc0000;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-card .big-icon {
-            font-size: 3rem;
-            color: #cc0000;
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #cc0000;
-        }
-
-        .benefit-card p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .benefit-card .highlight-text {
-            color: #cc0000;
-            font-weight: bold;
-        }
-
-        /* Social Proof */
-        .testimonials {
-            background: #f8f9fa;
-            padding: 80px 0;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .testimonial {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .testimonial::before {
-            content: '"';
-            font-size: 4rem;
-            color: #cc0000;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            opacity: 0.3;
+        .section-header {
+            background: #cc0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
 
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
+        .section-header h2 {
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #cc0000;
+            margin: 0;
         }
 
-        .testimonial-location {
-            color: #666;
-            font-size: 0.9rem;
+        .section-content {
+            padding: 30px 20px;
         }
 
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0;
-        }
-
+        /* Steps - Target Style */
         .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
 
         .step {
-            text-align: center;
-            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
         }
 
         .step-number {
             background: #cc0000;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            margin: 0 auto 20px;
+            flex-shrink: 0;
         }
 
-        .step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+        .step-content h3 {
             color: #cc0000;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
 
-        /* FAQ */
-        .faq {
+        .step-content p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .benefit {
             background: #f8f9fa;
-            padding: 80px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #cc0000;
         }
 
+        .benefit h4 {
+            color: #cc0000;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .benefit p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* Testimonials - Target Style */
+        .testimonials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #cc0000;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #cc0000;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-location {
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* FAQ - Target Style */
         .faq-item {
             background: white;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .faq-question {
-            padding: 20px;
+            padding: 18px 20px;
             font-weight: bold;
             color: #cc0000;
             cursor: pointer;
             border-bottom: 1px solid #eee;
+            background: #f8f9fa;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
         }
 
         .faq-answer {
-            padding: 20px;
+            padding: 18px 20px;
             display: none;
+            color: #666;
+            line-height: 1.5;
         }
 
-        /* Final CTA */
+        /* Final CTA Section */
         .final-cta {
-            background: linear-gradient(135deg, #cc0000 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #cc0000 0%, #e50000 100%);
             color: white;
-            padding: 80px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
         .final-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
 
-        .final-cta .urgency-text {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+        .urgency-text {
             color: #ffff00;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: bold;
         }
 
-        /* Responsive */
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero {
+                padding: 25px 0 35px;
+            }
+            
             .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .benefits-preview {
-                grid-template-columns: 1fr;
+                font-size: 2.2rem;
+                line-height: 1.2;
             }
             
             .cta-button {
-                padding: 15px 30px;
                 font-size: 1.2rem;
+                padding: 16px 30px;
+                width: 100%;
+                max-width: none;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+            }
+            
+            .trust-item {
+                min-width: auto;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .step-number {
+                margin: 0 auto;
+            }
+            
+            .section-content {
+                padding: 25px 15px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .steps {
+                flex-direction: row;
+            }
+            
+            .step {
+                flex: 1;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section - Above the Fold -->
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="target-bullseye"></div>
+                Target
+            </div>
+            <div class="circle-badge">Circle™ Member</div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Mobile First -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="urgency-badge">⚡ LIMITED TIME: Only 247 Spots Left Today</div>
+                <div class="exclusive-badge">Exclusive Target Circle™ Member Benefit</div>
                 
-                <h1>Stop Overpaying for Everything You Need - <span class="highlight">Save $750 Now</span></h1>
+                <h1>Unlock a <span class="highlight">$750 Target Gift Card!</span></h1>
                 
-                <p class="subtitle">Transform Your Shopping Power with This Exclusive Target Circle™ Member Benefit</p>
-
-                <div class="benefits-preview">
-                    <div class="benefit-item">
-                        <span class="icon">🛒</span>
-                        <h3>Zero Cost Shopping</h3>
-                        <p>Get $750 worth of groceries, essentials & more</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="icon">⚡</span>
-                        <h3>Instant Approval</h3>
-                        <p>Get approved in under 3 minutes</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="icon">💳</span>
-                        <h3>Stack Your Savings</h3>
-                        <p>Use with Circle offers & RedCard discounts</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="icon">🎯</span>
-                        <h3>100% Risk-Free</h3>
-                        <p>Exclusive member program - no catches</p>
-                    </div>
+                <div class="current-event">
+                    🎒 Perfect Timing for Back-to-School Shopping Season!
                 </div>
 
-                <a href="#claim" class="cta-button" onclick="trackConversion('cta_hero_click')">Claim My $750 Target Credit Now →</a>
+                <ul class="benefit-points">
+                    <li><strong>Beat inflation</strong> on school supplies, clothes & dorm essentials</li>
+                    <li><strong>Stock up</strong> on household necessities before prices rise more</li>
+                    <li><strong>Get approved in minutes</strong> - not days or weeks</li>
+                    <li><strong>100% free</strong> for qualified Target Circle™ members</li>
+                    <li><strong>Stacks with</strong> all your existing Circle offers & RedCard discounts</li>
+                </ul>
 
-                <div class="trust-bar">
-                    <div class="trust-stats">
-                        <div class="trust-stat">
-                            <div class="number">52,847</div>
-                            <div class="label">Members Already Saved</div>
-                        </div>
-                        <div class="trust-stat">
-                            <div class="number">4.9★</div>
-                            <div class="label">Average Rating</div>
-                        </div>
-                        <div class="trust-stat">
-                            <div class="number">2 Min</div>
-                            <div class="label">Average Approval Time</div>
-                        </div>
-                        <div class="trust-stat">
-                            <div class="number">$39M+</div>
-                            <div class="label">Total Member Savings</div>
-                        </div>
-                    </div>
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">Claim My $750 Gift Card Now</a>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">50,000+ Members Approved</div>
+                    <div class="trust-item">2-Min Process</div>
+                    <div class="trust-item">Digital Delivery</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Benefits Section -->
-    <section class="main-content">
+    <!-- Main Content -->
+    <div class="main-content">
         <div class="container">
+            <!-- How It Works -->
             <div class="section">
-                <h2>Finally, Shopping That Pays YOU Back</h2>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="big-icon">🏠</div>
-                        <h3>Cover Your Essential Household Needs</h3>
-                        <p>Stock up on groceries, cleaning supplies, personal care items, and everything your family needs. Your <span class="highlight-text">$750 credit covers months of necessities</span> while inflation keeps rising.</p>
+                <div class="section-header">
+                    <h2>How to Claim Your $750 Target Gift Card</h2>
+                </div>
+                <div class="section-content">
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Quick Survey</h3>
+                                <p>Answer a few questions about your Target shopping experience and preferences. Takes less than 2 minutes.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Instant Verification</h3>
+                                <p>Our system verifies your Target Circle™ membership and eligibility automatically.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Get Your Card</h3>
+                                <p>Receive your $750 Target gift card digitally via email or by mail - your choice!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Why Smart Families Are Using This Now</h2>
+                </div>
+                <div class="section-content">
+                    <div class="benefits">
+                        <div class="benefit">
+                            <h4>🎒 Back-to-School Made Easy</h4>
+                            <p>Cover notebooks, backpacks, clothes, electronics, and dorm supplies without breaking your budget.</p>
+                        </div>
+                        <div class="benefit">
+                            <h4>🏠 Household Essentials Covered</h4>
+                            <p>Stock up on groceries, cleaning supplies, personal care - everything your family needs.</p>
+                        </div>
+                        <div class="benefit">
+                            <h4>💰 Beat Rising Prices</h4>
+                            <p>Lock in your purchasing power while inflation keeps pushing everyday prices higher.</p>
+                        </div>
+                        <div class="benefit">
+                            <h4>🎁 Holiday Shopping Head Start</h4>
+                            <p>Get a jump on holiday gifts and decorations before the rush and price increases.</p>
+                        </div>
+                        <div class="benefit">
+                            <h4>📱 Instant Digital Access</h4>
+                            <p>No waiting for mail delivery - get your digital card and start shopping immediately.</p>
+                        </div>
+                        <div class="benefit">
+                            <h4>🔄 Stack All Your Savings</h4>
+                            <p>Combine with Circle offers, manufacturer coupons, and RedCard discounts for maximum value.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>What Target Circle™ Members Are Saying</h2>
+                </div>
+                <div class="section-content">
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <p class="testimonial-text">"Perfect timing for back-to-school! Got everything my kids needed plus extra supplies. The process was super easy and I had my card within hours!"</p>
+                            <div class="testimonial-author">Sarah M.</div>
+                            <div class="testimonial-location">Minneapolis, MN</div>
+                        </div>
+                        <div class="testimonial">
+                            <p class="testimonial-text">"As a long-time Circle member, this was an amazing surprise. Got approved instantly and used it for groceries and household items. Saved us so much money!"</p>
+                            <div class="testimonial-author">Mike R.</div>
+                            <div class="testimonial-location">Chicago, IL</div>
+                        </div>
+                        <div class="testimonial">
+                            <p class="testimonial-text">"With inflation hitting everything, this $750 was a lifesaver. Used it for back-to-school shopping and still had money left for household essentials."</p>
+                            <div class="testimonial-author">Jennifer L.</div>
+                            <div class="testimonial-location">Dallas, TX</div>
+                        </div>
+                        <div class="testimonial">
+                            <p class="testimonial-text">"I was skeptical but it's totally legit! Already planning to use my remaining balance for holiday shopping. This program is incredible!"</p>
+                            <div class="testimonial-author">David K.</div>
+                            <div class="testimonial-location">Phoenix, AZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="section-content">
+                    <div class="faq-item">
+                        <div class="faq-question">Is this really free for Target Circle™ members?</div>
+                        <div class="faq-answer">Yes! This is an exclusive program for Target Circle™ members. We partner with market research companies to gather valuable customer feedback, and Target shares the revenue by offering these gift cards to active members.</div>
                     </div>
 
-                    <div class="benefit-card">
-                        <div class="big-icon">👨‍👩‍👧‍👦</div>
-                        <h3>Back-to-School & Holiday Relief</h3>
-                        <p>From school supplies to holiday gifts, major expenses just got manageable. <span class="highlight-text">Smart families use this to budget for seasonal spending</span> without the financial stress.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">How quickly will I receive my $750 gift card?</div>
+                        <div class="faq-answer">Most members receive their gift card within 24-48 hours of approval. Digital delivery is available for instant access, or you can choose to receive a physical card by mail.</div>
                     </div>
 
-                    <div class="benefit-card">
-                        <div class="big-icon">💰</div>
-                        <h3>Build Your Emergency Fund</h3>
-                        <p>Use this windfall to reduce your monthly Target spending and <span class="highlight-text">redirect that $750 into savings or debt payoff</span>. It's like getting a bonus without working extra hours.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">Are there any hidden costs or requirements?</div>
+                        <div class="faq-answer">No! This program is 100% free for qualified Target Circle™ members. No purchase necessary, no monthly fees, no hidden costs whatsoever.</div>
                     </div>
 
-                    <div class="benefit-card">
-                        <div class="big-icon">🎁</div>
-                        <h3>Treat Your Family (Guilt-Free)</h3>
-                        <p>Finally splurge on those home improvements, electronics, or family treats you've been putting off. <span class="highlight-text">When Target pays for it, every purchase feels like a win.</span></p>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I use this with my other Target discounts?</div>
+                        <div class="faq-answer">Absolutely! Your $750 gift card works just like cash at Target and can be combined with Circle offers, coupons, and your RedCard discount for maximum savings.</div>
                     </div>
 
-                    <div class="benefit-card">
-                        <div class="big-icon">🔄</div>
-                        <h3>Stack Every Discount & Offer</h3>
-                        <p>Your $750 credit works with Circle offers, manufacturer coupons, and RedCard savings. <span class="highlight-text">Members often stretch this into $900+ worth of value</span> by smart stacking.</p>
-                    </div>
-
-                    <div class="benefit-card">
-                        <div class="big-icon">⚡</div>
-                        <h3>No Waiting, No Hassle</h3>
-                        <p>Skip the rebate delays and complicated requirements. <span class="highlight-text">Digital delivery means you're shopping with your credit within hours</span> of approval.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">What if I'm not approved?</div>
+                        <div class="faq-answer">The qualification process is quick and most active Target Circle™ members are approved. If you don't qualify, you'll know immediately with no impact to your account or credit.</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Target Circle™ Members Are Saying</h2>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p class="testimonial-text">"This literally saved our budget during back-to-school season. Got everything on the list plus extras, and still had credit left for Halloween costumes. My kids think I'm magic!"</p>
-                    <div class="testimonial-author">Sarah M.</div>
-                    <div class="testimonial-location">Minneapolis, MN - Mom of 3</div>
-                </div>
-
-                <div class="testimonial">
-                    <p class="testimonial-text">"I was skeptical at first, but this is legit. Used it for Christmas shopping and combined it with Circle offers. Ended up getting $850 worth of gifts for free. Best program ever!"</p>
-                    <div class="testimonial-author">Mike R.</div>
-                    <div class="testimonial-location">Chicago, IL - Target Circle Member 4 Years</div>
-                </div>
-
-                <div class="testimonial">
-                    <p class="testimonial-text">"With inflation hitting everything, this $750 meant we could still get organic food and quality household items without breaking our budget. Game changer for our family."</p>
-                    <div class="testimonial-author">Jennifer L.</div>
-                    <div class="testimonial-location">Dallas, TX - Budget-Conscious Shopper</div>
-                </div>
-
-                <div class="testimonial">
-                    <p class="testimonial-text">"The process was so easy - answered a few questions, got approved instantly, and had my digital card in my Target app within an hour. Used it the same day!"</p>
-                    <div class="testimonial-author">David K.</div>
-                    <div class="testimonial-location">Phoenix, AZ - Tech Professional</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>Get Your $750 in 3 Simple Steps</h2>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Share Your Shopping Preferences</h3>
-                    <p>Quick 2-minute survey about your Target shopping habits helps us verify your Circle membership and match you with relevant offers.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Get Instant Approval</h3>
-                    <p>Our system verifies your Target Circle™ status and approves qualified members immediately - no waiting, no follow-up required.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Start Shopping with Your $750</h3>
-                    <p>Choose digital delivery for instant access or physical card by mail. Either way, you're shopping with your credit within hours.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Everything You Need to Know</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">Why is Target giving away $750 gift cards to members?</div>
-                <div class="faq-answer">This is an exclusive research partnership program for Target Circle™ members. Market research companies value your shopping insights, and Target shares the revenue by offering these substantial credits to active members.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How fast will I actually receive my $750 credit?</div>
-                <div class="faq-answer">Most approved members receive their digital gift card within 1-2 hours. Physical cards arrive in 24-48 hours. You can start shopping immediately with digital delivery.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Are there any costs, fees, or catches?</div>
-                <div class="faq-answer">Absolutely none! This program is 100% free for qualified Target Circle™ members. No purchase necessary, no monthly fees, no hidden costs. Your $750 is genuine Target credit.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can I combine this with my other Target discounts?</div>
-                <div class="faq-answer">Yes! Your $750 gift card works just like cash and stacks with Circle offers, manufacturer coupons, and your RedCard discount. Many members maximize their value to $900+ this way.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What if I don't qualify or get declined?</div>
-                <div class="faq-answer">The survey takes only 2 minutes, so there's no risk in trying. If you don't qualify, you'll know immediately with no impact to you. Most active Circle members are approved instantly.</div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Don't Let This $750 Opportunity Slip Away</h2>
-            <p class="urgency-text">⏰ Only 247 spots remaining today - This exclusive program fills up fast</p>
+            <h2>Don't Miss Out - Limited Spots Available</h2>
+            <p class="urgency-text">⏰ Join 50,000+ Target Circle™ members who've already claimed their rewards</p>
             
-            <a href="#claim" class="cta-button" onclick="trackConversion('cta_final_click')">Secure My $750 Target Credit Now</a>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">Get My $750 Target Gift Card Now</a>
             
-            <p style="margin-top: 30px; font-size: 1.1rem; opacity: 0.9;">
+            <div style="margin-top: 25px; font-size: 1rem; opacity: 0.9;">
                 ✅ 100% Free for Target Circle™ Members<br>
                 ✅ Instant Digital Delivery Available<br>
-                ✅ Stacks with All Other Target Offers<br>
-                ✅ 52,847 Members Already Benefiting
-            </p>
+                ✅ Perfect for Back-to-School Shopping<br>
+                ✅ Stacks with All Other Target Offers
+            </div>
         </div>
     </section>
 
     <script>
-        // RedTrack conversion tracking function
-        function trackConversion(eventName) {
-            if (typeof RedTrack !== 'undefined') {
-                RedTrack('track', 'Conversion', {
-                    event: eventName,
-                    revenue: 0,
-                    currency: 'USD'
-                });
-            }
-            
-            // Facebook Pixel tracking
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    event_name: eventName,
-                    content_name: 'Target Gift Card Landing'
-                });
-            }
-            
-            // Google Analytics event tracking
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', {
-                    'event_category': 'CTA',
-                    'event_label': eventName,
-                    'send_to': 'GA_MEASUREMENT_ID/CONVERSION_ID'
-                });
-            }
-        }
-
         // FAQ toggle functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
