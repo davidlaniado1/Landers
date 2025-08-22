@@ -347,51 +347,274 @@
             font-size: 18px;
         }
         
-        /* Mobile Responsive */
+        /* Mobile-First Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                padding: 30px 0 40px;
+            }
+            
             .hero-headline {
-                font-size: 32px;
+                font-size: 28px;
+                line-height: 1.1;
+                margin-bottom: 15px;
             }
             
             .hero-subheadline {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 25px;
+                line-height: 1.3;
             }
             
             .hero-cta {
-                padding: 20px 30px;
+                padding: 18px 25px;
+                font-size: 18px;
+                margin: 15px 0;
+                width: 95%;
+                display: block;
+                text-align: center;
+                border-radius: 12px;
+            }
+            
+            .hero-cta::before {
                 font-size: 20px;
-                margin: 15px 5px;
             }
             
             .credibility-bar {
-                flex-direction: column;
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-top: 25px;
+                display: grid;
+            }
+            
+            .credibility-number {
+                font-size: 24px;
+            }
+            
+            .credibility-text {
+                font-size: 12px;
+            }
+            
+            .excitement-section {
+                padding: 40px 0;
+            }
+            
+            .excitement-header h2 {
+                font-size: 26px;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .excitement-header p {
+                font-size: 16px;
             }
             
             .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                margin-bottom: 30px;
+            }
+            
+            .benefit-card {
+                padding: 25px 20px;
+                text-align: left;
+            }
+            
+            .benefit-icon {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+            
+            .benefit-card h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .benefit-card p {
+                font-size: 15px;
+                line-height: 1.4;
+            }
+            
+            .highlight-box {
+                padding: 30px 20px;
+                margin: 30px 0;
+            }
+            
+            .highlight-box h3 {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+            
+            .highlight-box p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            
+            .secondary-cta {
+                padding: 16px 25px;
+                font-size: 16px;
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin: 15px 0;
+            }
+            
+            .cta-section {
+                padding: 40px 0;
+            }
+            
+            .cta-header h2 {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+            
+            .scarcity-box {
+                padding: 15px;
+                margin: 20px 0;
+                font-size: 14px;
+            }
+            
+            .social-proof {
+                padding: 40px 0;
+            }
+            
+            .social-proof h2 {
+                font-size: 26px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .testimonial {
+                padding: 20px;
+            }
+            
+            .testimonial-text {
+                font-size: 15px;
+                line-height: 1.4;
+            }
+            
+            .final-cta {
+                padding: 50px 0;
             }
             
             .final-cta h2 {
-                font-size: 32px;
+                font-size: 28px;
+                margin-bottom: 15px;
+                line-height: 1.1;
             }
             
             .final-cta p {
-                font-size: 18px;
+                font-size: 16px;
+                margin-bottom: 25px;
+                line-height: 1.4;
+            }
+            
+            .countdown-timer {
+                padding: 15px;
+                margin: 20px 0;
+                font-size: 14px;
             }
         }
         
         @media (max-width: 480px) {
-            .hero-cta {
-                padding: 18px 25px;
-                font-size: 18px;
-                width: 90%;
+            .urgency-banner {
+                font-size: 14px;
+                padding: 10px;
+                line-height: 1.2;
             }
             
-            .urgency-banner {
+            .hero-headline {
+                font-size: 24px;
+            }
+            
+            .hero-subheadline {
                 font-size: 16px;
-                padding: 12px;
+            }
+            
+            .hero-cta {
+                padding: 16px 20px;
+                font-size: 16px;
+                width: 100%;
+            }
+            
+            .credibility-bar {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            
+            .credibility-number {
+                font-size: 20px;
+            }
+            
+            .credibility-text {
+                font-size: 11px;
+            }
+            
+            .excitement-header h2 {
+                font-size: 22px;
+            }
+            
+            .benefit-card {
+                padding: 20px 15px;
+            }
+            
+            .benefit-icon {
+                font-size: 32px;
+            }
+            
+            .benefit-card h3 {
+                font-size: 18px;
+            }
+            
+            .highlight-box {
+                padding: 25px 15px;
+            }
+            
+            .highlight-box h3 {
+                font-size: 20px;
+            }
+            
+            .final-cta h2 {
+                font-size: 24px;
+            }
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px; /* Ensure good readability */
+            }
+            
+            /* Make sure buttons are easily tappable */
+            .hero-cta,
+            .secondary-cta {
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+            
+            /* Better spacing for mobile */
+            section {
+                margin-bottom: 0;
+            }
+            
+            /* Optimize touch targets */
+            .benefit-card:hover {
+                transform: none; /* Remove hover effects on mobile */
+            }
+            
+            /* Better mobile typography */
+            p {
+                line-height: 1.5;
             }
         }
     </style>
