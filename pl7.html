@@ -6,62 +6,21 @@
     <title>The Cash Sale Secret Real Estate Agents Don't Want You to Know</title>
     <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
     <script>
-        // Dynamic Date and Location Script
+        // Dynamic Date Script
         document.addEventListener('DOMContentLoaded', function() {
             // Get current date
             const today = new Date();
             const currentMonth = today.toLocaleDateString('en-US', { month: 'long' });
             const currentYear = today.getFullYear();
+            const lastYear = currentYear - 1;
             
             // Calculate dates
             const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
             const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
-            const lastYear = currentYear - 1;
             
             // Format dates
             const nextWeekFormatted = nextWeek.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
             const nextMonthFormatted = nextMonth.toLocaleDateString('en-US', { month: 'long' });
-            
-            // Default location data
-            let userCity = 'your area';
-            let userState = '';
-            
-            // Get user location
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`)
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.city && data.principalSubdivision) {
-                                userCity = data.city;
-                                userState = data.principalSubdivisionCode;
-                                updateLocationElements();
-                            }
-                        })
-                        .catch(error => {
-                            console.log('Location fetch failed:', error);
-                            // Fallback to IP-based location
-                            fetch('https://ipapi.co/json/')
-                                .then(response => response.json())
-                                .then(data => {
-                                    if (data.city && data.region_code) {
-                                        userCity = data.city;
-                                        userState = data.region_code;
-                                        updateLocationElements();
-                                    }
-                                })
-                                .catch(err => console.log('IP location failed:', err));
-                        });
-                });
-            }
-            
-            function updateLocationElements() {
-                // Update location elements
-                const locationElements = document.querySelectorAll('.dynamic-location');
-                locationElements.forEach(el => {
-                    el.textContent = userState ? `${userCity}, ${userState}` : userCity;
-                });
-            }
             
             // Update date elements
             const dateElements = document.querySelectorAll('.dynamic-date');
@@ -85,9 +44,6 @@
                         break;
                 }
             });
-            
-            // Initial location update
-            updateLocationElements();
         });
     </script>
     <style>
@@ -302,16 +258,16 @@
         </div>
 
         <div class="secret-banner">
-            🤫 INDUSTRY INSIDER REVEALS: The cash sale method that's saving <span class="dynamic-location">local</span> homeowners $15,000-$45,000 per transaction
+            🤫 INDUSTRY INSIDER REVEALS: The cash sale method that's saving homeowners $15,000-$45,000 per transaction
         </div>
 
         <div class="intro-text">
-            <strong>A former real estate agent from <span class="dynamic-location">your area</span> just broke his silence...</strong><br><br>
+            <strong>A former real estate agent just broke his silence...</strong><br><br>
             After 15 years in the industry, he's revealing why cash sales are the real estate industry's "best kept secret" - and why agents desperately hope you never find out about them.
         </div>
 
         <div class="secret-section">
-            <h2 class="section-header">6 Insider Secrets They Don't Want <span class="dynamic-location">Local</span> Homeowners to Know</h2>
+            <h2 class="section-header">6 Insider Secrets They Don't Want You to Know</h2>
 
             <div class="secret-box">
                 <div class="secret-number">1</div>
@@ -372,7 +328,7 @@
 
         <div class="reveal-section">
             <h3 style="font-size: 28px; margin-bottom: 15px;">Ready to Use This "Secret" for Yourself?</h3>
-            <p style="font-size: 18px; margin-bottom: 25px;">Join thousands of smart homeowners in <span class="dynamic-location">your area</span> who've discovered this better way to sell.</p>
+            <p style="font-size: 18px; margin-bottom: 25px;">Join thousands of smart homeowners who've discovered this better way to sell.</p>
             <a href="https://hpkpn.ttrk.io/click" class="cta-button" style="background: #ffc107; color: #212529;">Get My Confidential Cash Offer</a>
         </div>
 
