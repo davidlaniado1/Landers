@@ -6,7 +6,7 @@
     <title>URGENT: House Values Drop Coming - Cash Out Now!</title>
     <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
     <script>
-        // Dynamic Date and Location Script
+        // Dynamic Date Script
         document.addEventListener('DOMContentLoaded', function() {
             // Get current date
             const today = new Date();
@@ -17,52 +17,13 @@
             const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
             const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
             const spring2025 = new Date(2025, 2, 20); // March 20, 2025
+            const threeMonthsAgo = new Date(today.getFullYear(), today.getMonth() - 3, 1);
             
             // Format dates
             const nextWeekFormatted = nextWeek.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
             const nextMonthFormatted = nextMonth.toLocaleDateString('en-US', { month: 'long' });
             const springFormatted = spring2025.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-            
-            // Default location data
-            let userCity = 'your area';
-            let userState = '';
-            
-            // Get user location
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`)
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.city && data.principalSubdivision) {
-                                userCity = data.city;
-                                userState = data.principalSubdivisionCode;
-                                updateLocationElements();
-                            }
-                        })
-                        .catch(error => {
-                            console.log('Location fetch failed:', error);
-                            // Fallback to IP-based location
-                            fetch('https://ipapi.co/json/')
-                                .then(response => response.json())
-                                .then(data => {
-                                    if (data.city && data.region_code) {
-                                        userCity = data.city;
-                                        userState = data.region_code;
-                                        updateLocationElements();
-                                    }
-                                })
-                                .catch(err => console.log('IP location failed:', err));
-                        });
-                });
-            }
-            
-            function updateLocationElements() {
-                // Update location elements
-                const locationElements = document.querySelectorAll('.dynamic-location');
-                locationElements.forEach(el => {
-                    el.textContent = userState ? `${userCity}, ${userState}` : userCity;
-                });
-            }
+            const threeMonthsAgoFormatted = threeMonthsAgo.toLocaleDateString('en-US', { month: 'long' });
             
             // Update date elements
             const dateElements = document.querySelectorAll('.dynamic-date');
@@ -84,11 +45,11 @@
                     case 'spring-2025':
                         el.textContent = springFormatted;
                         break;
+                    case 'three-months-ago':
+                        el.textContent = threeMonthsAgoFormatted;
+                        break;
                 }
             });
-            
-            // Initial location update
-            updateLocationElements();
         });
     </script>
     <style>
@@ -259,12 +220,12 @@
         </div>
 
         <div class="urgency-banner">
-            ⚠️ INDUSTRY INSIDER ALERT: Fed signals suggest significant rate changes ahead - affecting house values in <span class="dynamic-location">your area</span> within 90 days!
+            ⚠️ INDUSTRY INSIDER ALERT: Fed signals suggest significant rate changes ahead - affecting house values within 90 days!
         </div>
 
         <div class="content-section">
-            <h2 class="section-header">5 Critical Market Indicators Every <span class="dynamic-location">Local</span> Homeowner Must Know</h2>
-            <p style="text-align: center; font-size: 18px; margin-bottom: 30px;">Smart money is already moving in <span class="dynamic-location">your area</span>. Don't get caught holding the bag...</p>
+            <h2 class="section-header">5 Critical Market Indicators Every Homeowner Must Know</h2>
+            <p style="text-align: center; font-size: 18px; margin-bottom: 30px;">Smart money is already moving. Don't get caught holding the bag...</p>
 
             <div class="reason-box">
                 <div class="reason-number">1</div>
@@ -298,7 +259,7 @@
         </div>
 
         <div class="social-proof">
-            <p style="font-size: 18px; font-weight: bold;">"I'm so glad I acted fast. My neighbor in <span class="dynamic-location">nearby area</span> listed traditionally in <span class="dynamic-date" data-date-type="current-month">this month</span> and she's STILL waiting for a buyer. I got my cash in <span class="dynamic-date" data-date-type="current-month">January</span> and avoided all this market stress." - Sarah M., Phoenix</p>
+            <p style="font-size: 18px; font-weight: bold;">"I'm so glad I acted fast. My neighbor listed traditionally in <span class="dynamic-date" data-date-type="three-months-ago">October</span> and she's STILL waiting for a buyer. I got my cash in <span class="dynamic-date" data-date-type="current-month">January</span> and avoided all this market stress." - Sarah M., Phoenix</p>
         </div>
 
         <div class="final-cta">
