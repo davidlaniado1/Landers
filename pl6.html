@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URGENT: House Values Drop Coming - Cash Out Now!</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <script>
+        // Dynamic Date and Location Script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current date
+            const today = new Date();
+            const currentMonth = today.toLocaleDateString('en-US', { month: 'long' });
+            const currentYear = today.getFullYear();
+            
+            // Calculate dates
+            const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+            const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+            const spring2025 = new Date(2025, 2, 20); // March 20, 2025
+            
+            // Format dates
+            const nextWeekFormatted = nextWeek.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+            const nextMonthFormatted = nextMonth.toLocaleDateString('en-US', { month: 'long' });
+            const springFormatted = spring2025.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            // Default location data
+            let userCity = 'your area';
+            let userState = '';
+            
+            // Get user location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.city && data.principalSubdivision) {
+                                userCity = data.city;
+                                userState = data.principalSubdivisionCode;
+                                updateLocationElements();
+                            }
+                        })
+                        .catch(error => {
+                            console.log('Location fetch failed:', error);
+                            // Fallback to IP-based location
+                            fetch('https://ipapi.co/json/')
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.city && data.region_code) {
+                                        userCity = data.city;
+                                        userState = data.region_code;
+                                        updateLocationElements();
+                                    }
+                                })
+                                .catch(err => console.log('IP location failed:', err));
+                        });
+                });
+            }
+            
+            function updateLocationElements() {
+                // Update location elements
+                const locationElements = document.querySelectorAll('.dynamic-location');
+                locationElements.forEach(el => {
+                    el.textContent = userState ? `${userCity}, ${userState}` : userCity;
+                });
+            }
+            
+            // Update date elements
+            const dateElements = document.querySelectorAll('.dynamic-date');
+            dateElements.forEach(el => {
+                const dateType = el.getAttribute('data-date-type');
+                switch(dateType) {
+                    case 'current-month':
+                        el.textContent = currentMonth;
+                        break;
+                    case 'current-year':
+                        el.textContent = currentYear;
+                        break;
+                    case 'next-week':
+                        el.textContent = nextWeekFormatted;
+                        break;
+                    case 'next-month':
+                        el.textContent = nextMonthFormatted;
+                        break;
+                    case 'spring-2025':
+                        el.textContent = springFormatted;
+                        break;
+                }
+            });
+            
+            // Initial location update
+            updateLocationElements();
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .headline {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subheadline {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .urgency-banner {
+            background: #ffc107;
+            color: #212529;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 30px;
+            border-left: 5px solid #fd7e14;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+        
+        .content-section {
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-header {
+            font-size: 28px;
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .reason-box {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #dc3545;
+            border-radius: 5px;
+        }
+        
+        .reason-number {
+            background: #dc3545;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .reason-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .reason-text {
+            font-size: 16px;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .social-proof {
+            background: #e8f5e8;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .final-cta {
+            background: #dc3545;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .guarantee {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="headline">URGENT: Market Shift Coming</h1>
+            <p class="subheadline">Why January 2025 Could Be Your Last Chance to Cash Out at Peak Value</p>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">Get My Cash Offer Before It's Too Late!</a>
+        </div>
+
+        <div class="urgency-banner">
+            ⚠️ INDUSTRY INSIDER ALERT: Fed signals suggest significant rate changes ahead - affecting house values in <span class="dynamic-location">your area</span> within 90 days!
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-header">5 Critical Market Indicators Every <span class="dynamic-location">Local</span> Homeowner Must Know</h2>
+            <p style="text-align: center; font-size: 18px; margin-bottom: 30px;">Smart money is already moving in <span class="dynamic-location">your area</span>. Don't get caught holding the bag...</p>
+
+            <div class="reason-box">
+                <div class="reason-number">1</div>
+                <h3 class="reason-title">Interest Rate Tsunami Building</h3>
+                <p class="reason-text">Fed insiders are quietly warning of potential rate spikes that could <span class="highlight">crash buyer demand overnight</span>. Houses that sell for $400K today might struggle to fetch $320K by <span class="dynamic-date" data-date-type="spring-2025">spring 2025</span>. Get your cash offer locked in before the market realizes what's coming.</p>
+            </div>
+
+            <div class="reason-box">
+                <div class="reason-number">2</div>
+                <h3 class="reason-title">Cash Buyers Are Stockpiling Properties NOW</h3>
+                <p class="reason-text">Professional investors with billions in ready cash are <span class="highlight">aggressively acquiring properties</span> before the general public catches on. They know something most homeowners don't - and they're positioning themselves for the opportunity ahead.</p>
+            </div>
+
+            <div class="reason-box">
+                <div class="reason-number">3</div>
+                <h3 class="reason-title">The "Listing Trap" Is Getting Worse</h3>
+                <p class="reason-text">Traditional home sales now take 4-6 months (if they sell at all). Meanwhile, carrying costs, price reductions, and market uncertainty are <span class="highlight">bleeding homeowners dry</span>. Cash sales close in 7 days - period.</p>
+            </div>
+
+            <div class="reason-box">
+                <div class="reason-number">4</div>
+                <h3 class="reason-title">Hidden Costs Are Skyrocketing</h3>
+                <p class="reason-text">Between realtor commissions (now averaging 6.2%), closing costs, repairs, staging, and holding costs during long sale periods, traditional sellers are losing <span class="highlight">$25,000-$45,000 on average</span>. Cash sales eliminate ALL these costs.</p>
+            </div>
+
+            <div class="reason-box">
+                <div class="reason-number">5</div>
+                <h3 class="reason-title">The Cash Conversion Window Is Closing</h3>
+                <p class="reason-text">This won't last forever. As more homeowners discover cash sales, <span class="highlight">competition for cash buyers increases</span> and offers become less generous. The best time to cash out? Right now, before everyone else figures it out.</p>
+            </div>
+        </div>
+
+        <div class="social-proof">
+            <p style="font-size: 18px; font-weight: bold;">"I'm so glad I acted fast. My neighbor in <span class="dynamic-location">nearby area</span> listed traditionally in <span class="dynamic-date" data-date-type="current-month">this month</span> and she's STILL waiting for a buyer. I got my cash in <span class="dynamic-date" data-date-type="current-month">January</span> and avoided all this market stress." - Sarah M., Phoenix</p>
+        </div>
+
+        <div class="final-cta">
+            <h3 style="font-size: 28px; margin-bottom: 15px;">Don't Wait for the Market to Tell You What Your House Is Worth</h3>
+            <p style="font-size: 18px; margin-bottom: 25px;">Get your guaranteed cash offer today - before market conditions change your options forever.</p>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button" style="background: #ffc107; color: #212529;">Secure My Cash Offer Now!</a>
+        </div>
+
+        <div class="guarantee">
+            🔒 Free Evaluation • No Obligation • 24-Hour Cash Offer • Close in 7 Days Guaranteed
+        </div>
+    </div>
+</body>
+</html>
