@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $1,000 Zelle Gift Card - Limited Time Offer</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .social-proof-bar {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .hero {
+            background: white;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .hero-header {
+            background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .hero-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="4"/></g></svg>') repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .zelle-logo {
+            width: 120px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: bold;
+            color: #6B46C1;
+            font-size: 24px;
+        }
+
+        .offer-badge {
+            background: #10B981;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        }
+
+        .urgency-timer {
+            background: #EF4444;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .timer-display {
+            font-size: 2rem;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: #F8FAFC;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: #6B46C1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+        }
+
+        .testimonials {
+            background: #F1F5F9;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #6B46C1;
+        }
+
+        .steps-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #6B46C1;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .faq-section {
+            margin: 40px 0;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            background: #6B46C1;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-badge {
+            background: #10B981;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #6B46C1;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-proof-bar">
+        👥 <span id="viewer-count">3,247</span> people are viewing this page right now
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-header">
+                <div class="hero-content">
+                    <div class="zelle-logo">Zelle®</div>
+                    <div class="offer-badge">LIMITED TIME OFFER</div>
+                    <h1>Get Your $1,000 Zelle Gift Card</h1>
+                    <p class="subtitle">Join thousands who've already claimed their instant cash reward</p>
+                    <a href="https://hpkpn.ttrk.io/click" class="cta-button">Claim Your $1,000 Now</a>
+                    
+                    <div class="urgency-timer">
+                        <div>⏰ This Offer Expires Soon!</div>
+                        <div class="timer-display" id="countdown">23:47:12</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Instant $1,000 Cash</h3>
+                        <p>Get your money instantly through Zelle - no waiting, no checks, no hassle. Direct to your bank account in minutes.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏦</div>
+                        <h3>Works With Any Bank</h3>
+                        <p>Zelle works with 99% of US banks and credit unions. If you have a bank account, you can receive your $1,000.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔒</div>
+                        <h3>100% Secure & Safe</h3>
+                        <p>Bank-level security with encrypted transactions. Your information is protected every step of the way.</p>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h2 style="text-align: center; margin-bottom: 20px; color: #1F2937;">What People Are Saying</h2>
+                    <div class="testimonial-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-text">"I couldn't believe it was real, but the $1,000 hit my account in less than 10 minutes! Amazing!"</div>
+                            <div class="testimonial-author">- Sarah M., Phoenix AZ</div>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <div class="testimonial-text">"So easy! Just a few clicks and the money was in my Chase account instantly through Zelle."</div>
+                            <div class="testimonial-author">- Mike R., Dallas TX</div>
+                        </div>
+                        
+                        <div class="testimonial">
+                            <div class="testimonial-text">"Perfect timing! Used it to pay off my credit card. The whole process took maybe 3 minutes."</div>
+                            <div class="testimonial-author">- Jennifer L., Miami FL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="steps-section">
+                    <h2 style="color: #1F2937; margin-bottom: 20px;">How It Works - Simple 3 Steps</h2>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Click "Claim Now"</h3>
+                            <p>Takes less than 30 seconds to get started</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Verify Your Details</h3>
+                            <p>Quick verification to ensure you qualify</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Receive Your $1,000</h3>
+                            <p>Money appears in your account instantly via Zelle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2 style="text-align: center; margin-bottom: 30px; color: #1F2937;">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Is this really free money? <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! This is a legitimate promotional campaign. You'll receive exactly $1,000 through Zelle with no hidden fees or charges.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            How fast will I receive the money? <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Zelle transfers are typically instant. Most people receive their $1,000 within 5-10 minutes of completing the verification process.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            What if my bank doesn't use Zelle? <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Over 99% of US banks and credit unions support Zelle. If yours doesn't, we'll provide alternative instant transfer methods.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Is there a catch? <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            No catch! This is a limited-time promotional offer. You simply need to be 18+ and have a valid US bank account.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-cta">
+            <h2>Don't Miss Out on Your $1,000</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 25px;">This exclusive offer won't last long. Thousands have already claimed theirs.</p>
+            <div class="guarantee-badge">✓ 100% Risk-Free Guarantee</div>
+            <br><br>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button" style="font-size: 1.3rem; padding: 20px 50px;">Get My $1,000 Zelle Gift Card</a>
+            <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.8;">Secure checkout • Instant delivery • No hidden fees</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://www.example.com/privacy">Privacy Policy</a>
+                <a href="https://www.example.com/terms">Terms of Service</a>
+                <a href="https://www.example.com/contact">Contact Us</a>
+                <a href="https://www.example.com/about">About Us</a>
+            </div>
+            <p>This is an advertisement. Individual results may vary. You must be 18+ and have a valid US bank account to participate. Zelle® is a trademark of Early Warning Services, LLC.</p>
+            <p style="margin-top: 15px; font-size: 12px;">© <span id="current-year">2025</span> All rights reserved. This site is not affiliated with Zelle or Early Warning Services, LLC.</p>
+        </div>
+    </div>
+
+    <script>
+        // Update viewer count dynamically
+        let viewers = 3247;
+        setInterval(() => {
+            viewers += Math.floor(Math.random() * 7) - 3;
+            viewers = Math.max(3200, Math.min(3300, viewers));
+            document.getElementById('viewer-count').textContent = viewers.toLocaleString();
+        }, 4000);
+
+        // Countdown timer
+        let timeLeft = 86232; // 23:57:12 in seconds
+        
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            }
+        }
+        
+        updateTimer();
+        setInterval(updateTimer, 1000);
+
+        // FAQ toggle functionality
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer.active').forEach(item => {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('span').textContent = '+';
+                });
+                
+                answer.classList.add('active');
+                icon.textContent = '-';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Social proof bar scroll behavior
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const socialBar = document.querySelector('.social-proof-bar');
+            
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                socialBar.style.transform = 'translateY(-100%)';
+            } else {
+                socialBar.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
