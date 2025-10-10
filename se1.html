@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Exit Assistance Program - Consumer News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .top-banner {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #d6d7d9;
+            font-size: 13px;
+        }
+        
+        .top-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .flag {
+            font-size: 16px;
+        }
+        
+        .banner-text {
+            color: #1b1b1b;
+            font-weight: 500;
+        }
+        
+        .info-toggle {
+            background: none;
+            border: none;
+            color: #005ea2;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 4px 8px;
+            text-decoration: none;
+        }
+        
+        .info-toggle:hover {
+            text-decoration: underline;
+        }
+        
+        .info-dropdown {
+            display: none;
+            background: #fff;
+            border-top: 1px solid #d6d7d9;
+            border-bottom: 2px solid #005ea2;
+        }
+        
+        .info-dropdown.show {
+            display: block;
+        }
+        
+        .info-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .info-section strong {
+            display: block;
+            color: #1b1b1b;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .info-section p {
+            color: #565c65;
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .gov-header {
+            background: linear-gradient(to right, #003d7a, #005a9c);
+            color: white;
+            padding: 12px 0;
+            border-bottom: 3px solid #c9b037;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .seal {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003d7a;
+            font-size: 18px;
+        }
+        
+        .header-text h1 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .header-text p {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        .alert-banner {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 20px;
+            margin: 15px auto;
+            max-width: 800px;
+            font-size: 13px;
+        }
+        
+        .alert-banner strong {
+            color: #856404;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .article {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .article-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .state-tag {
+            display: inline-block;
+            background: #e7f3ff;
+            border-left: 3px solid #0066cc;
+            padding: 8px 12px;
+            margin: 15px 0 20px 0;
+            font-size: 14px;
+        }
+        
+        .state-tag strong {
+            color: #003d7a;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 25px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-num {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0066cc;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .problem-box {
+            background: #fff3cd;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .problem-box h3 {
+            font-size: 16px;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .problem-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 15px;
+            color: #856404;
+        }
+        
+        .problem-box li {
+            margin-bottom: 6px;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #0066cc 0%, #003d7a 100%);
+            padding: 35px;
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .cta-box p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #218838;
+        }
+        
+        .cta-subtext {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            background: #003d7a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .top-banner-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .article {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .cta-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        <div class="top-banner-content">
+            <div class="banner-left">
+                <span class="flag">🇺🇸</span>
+                <span class="banner-text">An official news source for consumer protection information</span>
+            </div>
+            <button class="info-toggle" onclick="toggleInfo()">Here's how you know ▼</button>
+        </div>
+        <div id="infoDropdown" class="info-dropdown">
+            <div class="info-content">
+                <div class="info-section">
+                    <strong>Official sources</strong>
+                    <p>Information is verified through consumer protection databases and legal filings.</p>
+                </div>
+                <div class="info-section">
+                    <strong>🔒 Secure connection</strong>
+                    <p>Your information is encrypted and protected during transmission.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gov-header">
+        <div class="header-content">
+            <div class="seal">★</div>
+            <div class="header-text">
+                <h1>Consumer Protection News</h1>
+                <p>Homeowner Assistance Updates</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="alert-banner">
+        <strong>Program Update:</strong> New assistance available for solar agreement holders. Limited spots.
+    </div>
+    
+    <div class="container">
+        <div class="article">
+            <div class="article-meta">October 10, 2025 • Consumer Protection</div>
+            
+            <h1>Program Helps Homeowners Exit Costly Solar Agreements</h1>
+            
+            <p class="subtitle">New legal assistance available for those stuck in solar leases and PPAs they can't afford.</p>
+            
+            <div class="state-tag">
+                <strong><span id="state-name">Your State</span> Update:</strong> Residents can now check eligibility
+            </div>
+            
+            <p>
+                A new program is helping homeowners get out of solar panel agreements that aren't working out. If your solar payments are higher than expected, your system isn't performing like they promised, or you just can't afford it anymore, you might qualify.
+            </p>
+            
+            <div class="stats">
+                <div>
+                    <span class="stat-num">12,400+</span>
+                    <span class="stat-label">Families Helped</span>
+                </div>
+                <div>
+                    <span class="stat-num">$0</span>
+                    <span class="stat-label">Upfront Cost</span>
+                </div>
+                <div>
+                    <span class="stat-num">90-180</span>
+                    <span class="stat-label">Days Average</span>
+                </div>
+            </div>
+            
+            <p>
+                The program works with attorneys who specialize in getting people out of these contracts. No upfront costs – you only pay if they successfully get you out of the agreement.
+            </p>
+            
+            <div class="problem-box">
+                <h3>Common issues they handle:</h3>
+                <ul>
+                    <li>Payments higher than what you were promised</li>
+                    <li>Can't sell your home because of the solar lease</li>
+                    <li>System not producing enough energy</li>
+                    <li>Costs going up every year</li>
+                    <li>Just can't afford it anymore</li>
+                </ul>
+            </div>
+            
+            <p>
+                It covers solar leases, PPAs, PACE loans, and most other solar financing. They review your case, negotiate with the solar company, and handle all the legal stuff.
+            </p>
+            
+            <p>
+                <strong>Who qualifies:</strong> Homeowners in <span id="state-name-2">participating states</span> with solar agreements they want to exit. Priority goes to people facing financial hardship or who were misled about what they were signing up for.
+            </p>
+            
+            <p>
+                They're accepting applications now but say they might hit capacity soon based on how many people are reaching out. Takes about 60 seconds to see if you qualify.
+            </p>
+            
+            <p style="font-size: 14px; color: #666; margin-top: 25px; padding: 15px; background: #f8f9fa; border-left: 3px solid #0066cc;">
+                <strong>Note:</strong> This is a private legal service, not a government program. Success depends on your individual situation.
+            </p>
+        </div>
+        
+        <div class="cta-box">
+            <h2>Check If You Qualify</h2>
+            <p>See if you're eligible for assistance (takes 60 seconds)</p>
+            <a href="#" class="cta-button" onclick="window.location.href='YOUR-FORM-PAGE-URL.html'; return false;">Check Eligibility</a>
+            <p class="cta-subtext">Free case review • No upfront costs • Licensed attorneys</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Consumer Protection News © 2025</p>
+    </div>
+    
+    <script>
+        function toggleInfo() {
+            const dropdown = document.getElementById('infoDropdown');
+            dropdown.classList.toggle('show');
+            const button = document.querySelector('.info-toggle');
+            button.textContent = dropdown.classList.contains('show') ? 
+                'Here\'s how you know ▲' : 'Here\'s how you know ▼';
+        }
+        
+        async function detectState() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const stateName = data.region || 'Your State';
+                
+                document.getElementById('state-name').textContent = stateName;
+                document.getElementById('state-name-2').textContent = stateName;
+            } catch (error) {
+                console.log('State detection unavailable');
+            }
+        }
+        
+        detectState();
+    </script>
+</body>
+</html>
