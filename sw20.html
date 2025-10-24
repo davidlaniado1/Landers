@@ -21,47 +21,34 @@
             background-color: #0071CE;
             padding: 20px 40px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
         }
         
-        .logo {
+        .walmart-logo {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
         }
         
-        .logo-icon {
-            width: 55px;
-            height: 55px;
+        .walmart-spark-container {
+            display: flex;
+            gap: 3px;
+        }
+        
+        .walmart-spark {
+            width: 15px;
+            height: 15px;
             background-color: #FFC220;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            transform: rotate(45deg);
         }
         
-        .spark {
-            color: #0071CE;
-            font-size: 36px;
+        .walmart-text {
+            color: white;
+            font-size: 28px;
             font-weight: bold;
-        }
-        
-        .help-icon {
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #0071CE;
-            cursor: pointer;
+            letter-spacing: 2px;
         }
         
         .container {
@@ -344,6 +331,23 @@
         }
         
         @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .walmart-logo {
+                gap: 3px;
+            }
+            
+            .walmart-spark {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .walmart-text {
+                font-size: 18px;
+            }
+            
             .hero h1 {
                 font-size: 32px;
             }
@@ -371,13 +375,17 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">
-            <div class="logo-icon">
-                <span class="spark">✦</span>
+        <div class="walmart-logo">
+            <div class="walmart-spark-container">
+                <div class="walmart-spark"></div>
+                <div class="walmart-spark"></div>
+                <div class="walmart-spark"></div>
+                <div class="walmart-spark"></div>
+                <div class="walmart-spark"></div>
+                <div class="walmart-spark"></div>
             </div>
-            <span>Walmart Rewards</span>
+            <div class="walmart-text">Walmart</div>
         </div>
-        <div class="help-icon">?</div>
     </div>
     
     <div class="container">
