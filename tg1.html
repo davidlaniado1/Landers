@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $750 Target Cash Reward!</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #CC0000;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .target-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .bullseye {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .bullseye::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: #CC0000;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .bullseye::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .target-text {
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 900;
+        }
+        
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .highlight {
+            color: #CC0000;
+            font-weight: bold;
+        }
+        
+        .timer-text {
+            margin: 30px 0;
+            font-size: 18px;
+        }
+        
+        .card-visual {
+            background-color: #f9f9f9;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gift-card {
+            background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .gift-card-amount {
+            font-size: 72px;
+            font-weight: bold;
+        }
+        
+        .cart-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .target-card-text {
+            font-size: 24px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .value-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+            color: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .value-badge-text {
+            font-size: 14px;
+        }
+        
+        .value-badge-amount {
+            font-size: 36px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
+            color: white;
+            border: none;
+            padding: 25px 80px;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            margin: 40px auto;
+            display: block;
+            box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #990000 0%, #660000 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(204, 0, 0, 0.5);
+        }
+        
+        .social-proof {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid #CC0000;
+        }
+        
+        .social-proof h2 {
+            color: #CC0000;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .comment-count {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .sort-dropdown {
+            padding: 10px 20px;
+            border: 2px solid #CC0000;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #CC0000;
+            font-weight: bold;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .comment {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .comment-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #CC0000;
+            flex-shrink: 0;
+        }
+        
+        .comment-content {
+            flex: 1;
+        }
+        
+        .comment-author {
+            color: #CC0000;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .comment-text {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .comment-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .comment-action {
+            color: #CC0000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .comment-time {
+            color: #666;
+        }
+        
+        .load-more {
+            background-color: #CC0000;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 500px;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more:hover {
+            background-color: #990000;
+        }
+        
+        .footer {
+            background-color: #CC0000;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .footer-link:hover {
+            color: #ffcccc;
+        }
+        
+        .footer-disclaimer {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        
+        .footer-copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 20px;
+            }
+            
+            .target-logo {
+                gap: 12px;
+            }
+            
+            .bullseye {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .bullseye::before {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .bullseye::after {
+                width: 15px;
+                height: 15px;
+            }
+            
+            .target-text {
+                font-size: 28px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .cta-button {
+                font-size: 24px;
+                padding: 20px 40px;
+            }
+            
+            .gift-card-amount {
+                font-size: 48px;
+            }
+            
+            .value-badge {
+                width: 100px;
+                height: 100px;
+                right: -10px;
+            }
+            
+            .value-badge-amount {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="target-logo">
+            <div class="bullseye"></div>
+            <div class="target-text">Target</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Claim Your $750 Target Cash Reward!</h1>
+            
+            <div class="hero-text">
+                As a loyal shopper, you've been chosen for an opportunity to receive a 
+                <span class="highlight">$750 Target Gift Card!</span> 
+                Just answer a few quick questions about your shopping habits to see if you qualify. 
+                This exclusive offer won't last long.
+            </div>
+            
+            <div class="timer-text">
+                Ready to claim your reward? Click the button below to begin. Your spot is reserved for 
+                <span class="highlight">3 minutes</span> once you start.
+            </div>
+            
+            <div class="card-visual" onclick="window.location.href='https://hpkpn.ttrk.io/click'">
+                <div class="gift-card">
+                    <div class="cart-icon">🛒</div>
+                    <div class="gift-card-amount">$750</div>
+                    <div class="target-card-text">TARGET</div>
+                </div>
+                <div class="value-badge">
+                    <div class="value-badge-text">VALUE</div>
+                    <div class="value-badge-amount">$750</div>
+                </div>
+            </div>
+            
+            <button class="cta-button" onclick="window.location.href='https://hpkpn.ttrk.io/click'">START NOW</button>
+        </div>
+        
+        <div class="social-proof">
+            <h2>See what other shoppers are saying:</h2>
+            
+            <div class="comments-header">
+                <div class="comment-count">130 comments</div>
+                <select class="sort-dropdown">
+                    <option>Newest</option>
+                    <option>Oldest</option>
+                    <option>Most Liked</option>
+                </select>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="comment-content">
+                    <div class="comment-author">Brenda S.</div>
+                    <div class="comment-text">
+                        My $750 Target gift card came yesterday! I'm so excited to go on a shopping spree. 
+                        So glad I took a moment to do the survey!
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-action">Like</span>
+                        <span class="comment-action">Reply</span>
+                        <span class="comment-time">5 · a day ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="comment-content">
+                    <div class="comment-author">Mark T.</div>
+                    <div class="comment-text">
+                        I was skeptical, but it's legit. The process was easy, just waiting for my card to come in the mail now.
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-action">Like</span>
+                        <span class="comment-action">Reply</span>
+                        <span class="comment-time">2 · 3 days ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="comment-content">
+                    <div class="comment-author">Carla Rossi</div>
+                    <div class="comment-text">
+                        Got mine!! I'm so happy, this is going to be the best run ever. You should definitely try it!
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-action">Like</span>
+                        <span class="comment-action">Reply</span>
+                        <span class="comment-time">8 · 1 week ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                <div class="comment-content">
+                    <div class="comment-author">Aisha Jones</div>
+                    <div class="comment-text">
+                        This is 100% real! I just got my confirmation email. Has anyone else received theirs?
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-action">Like</span>
+                        <span class="comment-action">Reply</span>
+                        <span class="comment-time">12 · 2 weeks ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="load-more">Load more comments</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Terms and Conditions</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Brand Agreement</a>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>
+                <strong>Brand Agreement:</strong> This promotion is operated by Target Rewards and is not sponsored, endorsed, or administered 
+                by or associated with Target Corporation. All trademarks, logos, and brand names are the property of their respective 
+                owners. Their use on this site does not imply any affiliation with or endorsement by them.
+            </p>
+            <p style="margin-top: 15px;">
+                This website is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this website is NOT 
+                endorsed by Facebook in any way. Facebook is a trademark of Meta Platforms, Inc.
+            </p>
+        </div>
+        
+        <div class="footer-copyright">
+            © 2025 — <strong>Target Rewards</strong>. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
