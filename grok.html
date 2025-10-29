@@ -36,37 +36,37 @@
 
 <div class="container">
 
-    <!-- Walmart Logo + Reward Tips -->
+    <!-- 1. Walmart Logo (official) -->
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1280px-Walmart_logo.svg.png" alt="Walmart Logo" class="walmart-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/512px-Walmart_logo.svg.png" alt="Walmart Logo" class="walmart-logo">
         <div class="reward-tips">Reward Tips</div>
     </div>
 
-    <!-- Dynamic State Notice -->
+    <!-- 2. Dynamic State Notice -->
     <div class="state-notice" id="stateNotice">Important Notice for All <span id="userState">Residents</span></div>
 
-    <!-- Red Last Updated Banner -->
+    <!-- 3. Red Last-Updated Banner -->
     <div class="ad-banner">Last Updated: <span id="updateTime">7 Minutes Ago</span></div>
 
-    <!-- Main Headline -->
+    <!-- 4. Headline -->
     <h1>Walmart Is Giving Away <span class="highlight">$750 Gift Cards</span> to Anyone Who Answers a Quick Survey!</h1>
 
-    <!-- Hero Image -->
-    <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy family with $750 Walmart Gift Card" class="hero-img">
+    <!-- 5. Hero Image (happy shopper with gift card) -->
+    <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy shopper with $750 Walmart Gift Card" class="hero-img">
 
-    <!-- As Seen On -->
+    <!-- 6. As-seen-on logos (official) -->
     <div class="seen-on">
         <strong>As seen on:</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/AOL_logo.svg/1280px-AOL_logo.svg.png" alt="AOL">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Yahoo%21_logo.svg/1280px-Yahoo%21_logo.svg.png" alt="Yahoo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/MSN_logo.svg/1280px-MSN_logo.svg.png" alt="MSN">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/AOL_logo.svg/512px-AOL_logo.svg.png" alt="AOL">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Yahoo%21_logo.svg/512px-Yahoo%21_logo.svg.png" alt="Yahoo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/MSN_logo.svg/512px-MSN_logo.svg.png" alt="MSN">
     </div>
 
-    <!-- Body Text -->
+    <!-- Body copy -->
     <p>Big news! Walmart wants to say <strong>thank you</strong> to shoppers. They are giving away <span class="highlight">$750 gift cards</span> to people who live in eligible zip codes.</p>
     <p>All you do is answer a few easy questions. It takes less than 2 minutes. After that, you get your gift card to spend on <strong>anything</strong> at Walmart!</p>
 
-    <!-- Benefits with icons -->
+    <!-- Benefits -->
     <ul class="benefit-list">
         <li><i class="fas fa-shopping-cart"></i> Groceries & Snacks</li>
         <li><i class="fas fa-tshirt"></i> Clothes & Shoes</li>
@@ -74,7 +74,7 @@
         <li><i class="fas fa-tv"></i> TVs & Electronics</li>
     </ul>
 
-    <!-- CTA -->
+    <!-- First CTA -->
     <div class="cta-head">Want Your Free $750 Walmart Gift Card? Tap YES!</div>
     <a href="https://hpkpn.ttrk.io/click" class="yes-btn">YES!</a>
 
@@ -100,18 +100,16 @@
 </div>
 
 <script>
-    // Dynamic State
+    // ---- Dynamic state -------------------------------------------------
     fetch('https://ipapi.co/json/')
         .then(r => r.json())
         .then(d => {
             const state = d.region || 'Shoppers';
             document.getElementById('userState').textContent = state + ' Residents';
         })
-        .catch(() => {
-            document.getElementById('userState').textContent = 'Shoppers';
-        });
+        .catch(() => document.getElementById('userState').textContent = 'Shoppers');
 
-    // Fake Last Updated
+    // ---- Fake "Last Updated" -------------------------------------------
     setInterval(() => {
         const mins = Math.floor(Math.random()*9)+1;
         document.getElementById('updateTime').textContent = mins+' Minutes Ago';
