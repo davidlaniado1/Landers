@@ -38,7 +38,7 @@
 
     <!-- Walmart Logo + Reward Tips -->
     <div class="header">
-        <img src="https://i.imgur.com/2bXJ5aN.png" alt="Walmart Logo" class="walmart-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1280px-Walmart_logo.svg.png" alt="Walmart Logo" class="walmart-logo">
         <div class="reward-tips">Reward Tips</div>
     </div>
 
@@ -52,14 +52,14 @@
     <h1>Walmart Is Giving Away <span class="highlight">$750 Gift Cards</span> to Anyone Who Answers a Quick Survey!</h1>
 
     <!-- Hero Image -->
-    <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="Happy family with $750 Walmart Gift Card" class="hero-img">
+    <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy family with $750 Walmart Gift Card" class="hero-img">
 
     <!-- As Seen On -->
     <div class="seen-on">
         <strong>As seen on:</strong><br>
-        <img src="https://i.imgur.com/5c5W7eP.png" alt="AOL">
-        <img src="https://i.imgur.com/4e2j7yR.png" alt="Yahoo">
-        <img src="https://i.imgur.com/3vZ9x0M.png" alt="MSN">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/AOL_logo.svg/1280px-AOL_logo.svg.png" alt="AOL">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Yahoo%21_logo.svg/1280px-Yahoo%21_logo.svg.png" alt="Yahoo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/MSN_logo.svg/1280px-MSN_logo.svg.png" alt="MSN">
     </div>
 
     <!-- Body Text -->
@@ -100,7 +100,7 @@
 </div>
 
 <script>
-    // ---- Dynamic State -------------------------------------------------
+    // Dynamic State
     fetch('https://ipapi.co/json/')
         .then(r => r.json())
         .then(d => {
@@ -111,7 +111,7 @@
             document.getElementById('userState').textContent = 'Shoppers';
         });
 
-    // ---- Fake "Last Updated" -------------------------------------------
+    // Fake Last Updated
     setInterval(() => {
         const mins = Math.floor(Math.random()*9)+1;
         document.getElementById('updateTime').textContent = mins+' Minutes Ago';
