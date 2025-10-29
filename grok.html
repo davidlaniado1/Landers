@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsBreak: $750 Walmart Gift Card Giveaway!</title>
+    <title>NewsBreak: $750 Walmart Gift Card</title>
     <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -11,102 +11,112 @@
             --green: #28a745;
             --red: #dc3545;
             --yellow: #ffc107;
-            --dark: #212529;
+            --blue: #007bff;
         }
-        body { 
-            font-family: 'Helvetica', Arial, sans-serif; 
-            margin: 0; 
-            background: #fff; 
-            color: #333; 
-            line-height: 1.6;
-        }
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #333; line-height: 1.6; }
         .container { max-width: 480px; margin: 0 auto; padding: 15px; }
-        .logo { text-align: center; font-weight: bold; color: var(--dark); font-size: 1.4rem; margin: 10px 0; }
-        .ad-banner { background: var(--red); color: white; text-align: center; padding: 8px; font-weight: bold; border-radius: 6px; }
-        h1 { font-size: 1.8rem; text-align: center; margin: 15px 0; line-height: 1.3; }
-        .highlight { background: var(--yellow); padding: 0 4px; }
-        .hero-img { width: 100%; border-radius: 8px; margin: 15px 0; }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .walmart-logo { height: 40px; }
+        .reward-tips { background: #e6f2ff; color: var(--blue); font-weight: bold; text-align: center; padding: 8px; border-radius: 6px; font-size: 1.1rem; }
+        .state-notice { font-size: 1.4rem; font-weight: bold; text-align: center; margin: 15px 0; }
+        .ad-banner { background: var(--red); color: white; text-align: center; padding: 10px; font-weight: bold; border-radius: 8px; margin: 10px 0; }
+        h1 { font-size: 1.9rem; text-align: center; margin: 10px 0; line-height: 1.3; }
+        .highlight { background: var(--yellow); padding: 2px 6px; border-radius: 4px; }
+        .hero-img { width: 100%; border-radius: 12px; margin: 15px 0; }
+        .seen-on { text-align: center; margin: 15px 0; font-size: 0.9rem; color: #555; }
+        .seen-on img { height: 30px; margin: 0 8px; opacity: 0.7; }
         .benefit-list { list-style: none; padding: 0; margin: 20px 0; }
-        .benefit-list li { 
-            display: flex; align-items: center; font-size: 1.1rem; margin: 12px 0; 
-        }
-        .benefit-list i { color: var(--green); margin-right: 12px; font-size: 1.5rem; }
+        .benefit-list li { display: flex; align-items: center; font-size: 1.1rem; margin: 10px 0; }
+        .benefit-list i { color: var(--green); margin-right: 12px; font-size: 1.4rem; }
         .cta-head { font-size: 1.6rem; text-align: center; margin: 20px 0 10px; font-weight: bold; }
         .yes-btn {
             display: block; background: var(--green); color: white; 
-            text-align: center; padding: 18px; font-size: 1.5rem; 
-            font-weight: bold; border-radius: 50px; text-decoration: none;
-            margin: 20px auto; max-width: 90%;
+            text-align: center; padding: 18px; font-size: 1.5rem; font-weight: bold;
+            border-radius: 50px; text-decoration: none; margin: 20px auto; max-width: 90%;
         }
-        .yes-btn:hover { background: #218838; }
-        .testimonials { margin: 30px 0; }
-        .testimonial { 
-            background: #f8f9fa; padding: 15px; border-radius: 8px; 
-            margin-bottom: 15px; font-style: italic; 
-        }
+        .testimonial { background: #f8f9fa; padding: 15px; border-radius: 10px; margin: 15px 0; font-style: italic; }
         .testimonial strong { display: block; margin-top: 8px; font-style: normal; }
-        footer { text-align: center; font-size: 0.8rem; color: #777; margin-top: 40px; }
+        footer { text-align: center; font-size: 0.8rem; color: #777; margin: 40px 0 20px; }
     </style>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Logo / Site Name -->
-    <div class="logo">NEWSBREAK</div>
+    <!-- Walmart Logo + Reward Tips -->
+    <div class="header">
+        <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="Walmart Logo" class="walmart-logo">
+        <div class="reward-tips">Reward Tips</div>
+    </div>
 
-    <!-- Red "Last Updated" Banner -->
-    <div class="ad-banner">Last Updated: 7 Minutes Ago</div>
+    <!-- Dynamic State Notice -->
+    <div class="state-notice" id="stateNotice">Important Notice for All <span id="userState">Residents</span></div>
+
+    <!-- Red Last Updated Banner -->
+    <div class="ad-banner">Last Updated: <span id="updateTime">7 Minutes Ago</span></div>
 
     <!-- Main Headline -->
     <h1>Walmart Is Giving Away <span class="highlight">$750 Gift Cards</span> to Anyone Who Answers a Quick Survey!</h1>
 
-    <!-- Hero Image (your Imgur) -->
-    <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="Walmart $750 Gift Card" class="hero-img">
+    <!-- Hero Image (Working!) -->
+    <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="Happy family with $750 Walmart Gift Card" class="hero-img">
 
-    <!-- Body Text -->
+    <!-- As Seen On -->
+    <div class="seen-on">
+        <strong>As seen on:</strong><br>
+        <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="AOL">
+        <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="Yahoo">
+        <img src="https://i.imgur.com/8YkB0fJ.jpeg" alt="MSN">
+    </div>
+
+    <!-- Body -->
     <p>Big news! Walmart wants to say <strong>thank you</strong> to shoppers. They are giving away <span class="highlight">$750 gift cards</span> to people who live in eligible zip codes.</p>
-
     <p>All you do is answer a few easy questions. It takes less than 2 minutes. After that, you get your gift card to spend on <strong>anything</strong> at Walmart!</p>
 
-    <!-- Benefits with Icons -->
+    <!-- Benefits -->
     <ul class="benefit-list">
-        <li><i class="fas fa-shopping-cart"></i> Groceries & Snacks</li>
-        <li><i class="fas fa-tshirt"></i> Clothes & Shoes</li>
-        <li><i class="fas fa-gamepad"></i> Toys & Games</li>
-        <li><i class="fas fa-tv"></i> TVs & Electronics</li>
+        <li>Groceries & Snacks</li>
+        <li>Clothes & Shoes</li>
+        <li>Toys & Games</li>
+        <li>TVs & Electronics</li>
     </ul>
 
-    <!-- Urgency CTA -->
+    <!-- CTA -->
     <div class="cta-head">Want Your Free $750 Walmart Gift Card? Tap YES!</div>
     <a href="https://hpkpn.ttrk.io/click" class="yes-btn">YES!</a>
 
     <!-- Testimonials -->
-    <div class="testimonials">
-        <div class="testimonial">
-            "I finished the survey in 90 seconds and got my $750 card the same day! Bought a new bike for my son." 
-            <strong>– Lisa, Ohio</strong>
-        </div>
-        <div class="testimonial">
-            "Thought it was fake, but it’s 100% real. Already used it for groceries!" 
-            <strong>– Tom, Georgia</strong>
-        </div>
-        <div class="testimonial">
-            "Super easy. I’m telling all my friends!" 
-            <strong>– Maria, Arizona</strong>
-        </div>
+    <div class="testimonial">
+        "I got my $750 card in under 2 minutes! Already bought groceries." 
+        <strong>– Sarah, Texas</strong>
+    </div>
+    <div class="testimonial">
+        "Thought it was fake… but it worked! Thanks Walmart!" 
+        <strong>– Mike, Florida</strong>
     </div>
 
     <!-- Final CTA -->
-    <div class="cta-head">Spots Are Limited – Claim Yours Before They’re Gone!</div>
-    <a href="https://hpkpn.ttrk.io/click" class="yes-btn">YES! GIVE ME MY $750 CARD</a>
+    <div class="cta-head">Spots Are Limited – Claim Yours Now!</div>
+    <a href="https://hpkpn.ttrk.io/click" class="yes-btn">YES! GIVE ME MY CARD</a>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 NewsBreak. All rights reserved.</p>
-    </footer>
-
+    <footer>© 2025 NewsBreak. All rights reserved.</footer>
 </div>
 
-</body>
-</html>
+<script>
+    // Dynamic State Detection (via IP geolocation)
+    fetch('https://ipapi.co/json/')
+        .then(r => r.json())
+        .then(data => {
+            const state = data.region || 'Residents';
+            document.getElementById('userState').textContent = state + ' Residents';
+        })
+        .catch(() => {
+            document.getElementById('userState').textContent = 'Shoppers';
+        });
+
+    // Fake "Last Updated" timer
+    setInterval(() => {
+        const mins = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('updateTime').textContent = mins + ' Minutes Ago';
+    }, 300
