@@ -304,42 +304,25 @@
         </div>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     <script>
         // Create cha-ching sound effect
-        function playChaChing() {
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        async function playChaChing() {
+            await Tone.start();
             
-            // First "cha" sound (higher pitch)
-            const oscillator1 = audioContext.createOscillator();
-            const gainNode1 = audioContext.createGain();
+            const synth = new Tone.Synth({
+                oscillator: { type: 'sine' },
+                envelope: {
+                    attack: 0.001,
+                    decay: 0.1,
+                    sustain: 0,
+                    release: 0.1
+                }
+            }).toDestination();
             
-            oscillator1.connect(gainNode1);
-            gainNode1.connect(audioContext.destination);
-            
-            oscillator1.frequency.setValueAtTime(800, audioContext.currentTime);
-            oscillator1.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.1);
-            
-            gainNode1.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode1.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-            
-            oscillator1.start(audioContext.currentTime);
-            oscillator1.stop(audioContext.currentTime + 0.1);
-            
-            // Second "ching" sound (lower pitch, delayed)
-            const oscillator2 = audioContext.createOscillator();
-            const gainNode2 = audioContext.createGain();
-            
-            oscillator2.connect(gainNode2);
-            gainNode2.connect(audioContext.destination);
-            
-            oscillator2.frequency.setValueAtTime(1200, audioContext.currentTime + 0.1);
-            oscillator2.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.3);
-            
-            gainNode2.gain.setValueAtTime(0.4, audioContext.currentTime + 0.1);
-            gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-            
-            oscillator2.start(audioContext.currentTime + 0.1);
-            oscillator2.stop(audioContext.currentTime + 0.3);
+            const now = Tone.now();
+            synth.triggerAttackRelease('G5', '0.1', now);
+            synth.triggerAttackRelease('C6', '0.15', now + 0.1);
         }
         
         // Animate the refund counter
