@@ -68,6 +68,14 @@
             color: #dc3545;
         }
         
+        .animated-amount-header {
+            font-size: 42px;
+            color: #28a745;
+            font-weight: 900;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
         .author {
             font-size: 13px;
             color: #666;
@@ -256,7 +264,7 @@
     <div class="container">
         <div class="date">🔴 CRITICAL UPDATE - October 30, 2025</div>
         
-        <h1>Government Shutdown Got You Worried? <span class="red-text">Claim Your $750 Walmart Card</span> While You Still Can</h1>
+        <h1>Government Shutdown Got You Worried? <span class="red-text">Claim Your <span class="animated-amount-header">$<span id="counter">0</span></span> Walmart Card</span> While You Still Can</h1>
         
         <div class="author">Emergency Report | Consumer Relief Team</div>
         
@@ -394,5 +402,31 @@
             *This is a promotional offer from third-party market research companies. Participants must complete all required steps to qualify for rewards. Gift card fulfillment times may vary. This site is not affiliated with or endorsed by Walmart Inc. or any government agency. Offer subject to availability and may end at any time.
         </div>
     </div>
+    
+    <script>
+        // Animate counter from 0 to 750
+        function animateCounter() {
+            const counter = document.getElementById('counter');
+            const target = 750;
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = target / steps;
+            let current = 0;
+            const stepDuration = duration / steps;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
+            }, stepDuration);
+        }
+        
+        // Start animation when page loads
+        window.addEventListener('load', animateCounter);
+    </script>
 </body>
 </html>
