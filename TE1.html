@@ -304,27 +304,7 @@
         </div>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     <script>
-        // Create cha-ching sound effect
-        async function playChaChing() {
-            await Tone.start();
-            
-            const synth = new Tone.Synth({
-                oscillator: { type: 'sine' },
-                envelope: {
-                    attack: 0.001,
-                    decay: 0.1,
-                    sustain: 0,
-                    release: 0.1
-                }
-            }).toDestination();
-            
-            const now = Tone.now();
-            synth.triggerAttackRelease('G5', '0.1', now);
-            synth.triggerAttackRelease('C6', '0.15', now + 0.1);
-        }
-        
         // Animate the refund counter
         function animateCounter() {
             const counter = document.getElementById('refundCounter');
@@ -337,7 +317,6 @@
                 current += increment;
                 if (current >= target) {
                     counter.textContent = target.toLocaleString();
-                    playChaChing(); // Play sound when target reached
                     clearInterval(timer);
                 } else {
                     counter.textContent = Math.floor(current).toLocaleString();
