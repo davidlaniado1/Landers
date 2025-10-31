@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $750 Towards Shopping at ALDI</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(180deg, #001489 0%, #000B5C 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .bg-circle-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .bg-circle-2 {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: -80px;
+            animation-delay: 3s;
+        }
+        
+        .bg-circle-3 {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+        
+        .bg-circle-4 {
+            width: 250px;
+            height: 250px;
+            top: 30%;
+            right: 10%;
+            animation-delay: 9s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-30px) translateX(20px); }
+            50% { transform: translateY(-10px) translateX(-20px); }
+            75% { transform: translateY(-40px) translateX(10px); }
+        }
+        
+        .bg-icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.1;
+            animation: floatIcon 15s infinite ease-in-out;
+        }
+        
+        .bg-icon-1 {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .bg-icon-2 {
+            top: 25%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .bg-icon-3 {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        .bg-icon-4 {
+            bottom: 30%;
+            right: 20%;
+            animation-delay: 6s;
+        }
+        
+        .bg-icon-5 {
+            top: 50%;
+            left: 5%;
+            animation-delay: 8s;
+        }
+        
+        .bg-icon-6 {
+            top: 70%;
+            right: 8%;
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(10deg); }
+        }
+        
+        .header {
+            background: #001489;
+            padding: 15px 20px;
+            margin: -20px -20px 30px -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .aldi-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .aldi-emblem {
+            width: 45px;
+            height: 45px;
+            background: #0059A8;
+            border: 3px solid #FF8200;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 22px;
+            color: white;
+            font-family: Arial, sans-serif;
+            letter-spacing: -1px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .aldi-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: white;
+            font-family: Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            color: white;
+            font-size: 12px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .product-images {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .product-images img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        h1 {
+            color: #001489;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .question {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .option-btn {
+            background: #001489;
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,20,137,0.3);
+        }
+        
+        .option-btn:hover {
+            background: #000B5C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,20,137,0.4);
+        }
+        
+        .approval-content {
+            padding: 20px 0;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        
+        .checkmark svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+        }
+        
+        .congrats-title {
+            color: #4CAF50;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .approval-text {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .claim-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(76,175,80,0.4);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .claim-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76,175,80,0.5);
+        }
+        
+        .progress {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+        
+        .progress-dot.active {
+            background: #001489;
+        }
+        
+        .social-proof {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        
+        .avatars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #001489;
+            border: 3px solid white;
+            margin-left: -10px;
+        }
+        
+        .avatar:first-child {
+            margin-left: 0;
+        }
+        
+        .social-text {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .social-text strong {
+            color: #001489;
+        }
+        
+        .loading-content {
+            padding: 20px 0;
+        }
+        
+        .loading-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .loading-step {
+            text-align: left;
+        }
+        
+        .step-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .step-icon {
+            font-size: 20px;
+        }
+        
+        .loading-step.active .step-text {
+            color: #001489;
+            font-weight: 600;
+        }
+        
+        .loading-step.complete .step-text {
+            color: #4CAF50;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #001489, #000B5C);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .loading-step.complete .progress-fill {
+            background: #4CAF50;
+        }
+        
+        .gift-card {
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #001489 0%, #000B5C 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,20,137,0.4);
+            position: relative;
+            overflow: hidden;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+        
+        .gift-card-shine {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .gift-card-logo {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .gift-card-emblem {
+            width: 40px;
+            height: 40px;
+            background: #0059A8;
+            border: 3px solid #FF8200;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            letter-spacing: -1px;
+        }
+        
+        .gift-card-logo-text {
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            font-family: Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        .gift-card-amount {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            font-weight: bold;
+            color: #FF8200;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
+        }
+        
+        .gift-card-text {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        
+        .gift-card-sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .sparkle {
+            position: absolute;
+            font-size: 24px;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        .sparkle-1 {
+            top: 15%;
+            right: 15%;
+            animation-delay: 0s;
+        }
+        
+        .sparkle-2 {
+            top: 70%;
+            left: 10%;
+            animation-delay: 0.7s;
+        }
+        
+        .sparkle-3 {
+            top: 30%;
+            left: 80%;
+            animation-delay: 1.4s;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .question {
+                font-size: 18px;
+            }
+            
+            .gift-card {
+                height: 200px;
+                max-width: 100%;
+            }
+            
+            .gift-card-amount {
+                font-size: 56px;
+            }
+            
+            .gift-card-text {
+                font-size: 16px;
+            }
+            
+            .congrats-title {
+                font-size: 26px;
+            }
+            
+            .aldi-text {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-circle bg-circle-3"></div>
+        <div class="bg-circle bg-circle-4"></div>
+        <div class="bg-icon bg-icon-1">🛒</div>
+        <div class="bg-icon bg-icon-2">🎁</div>
+        <div class="bg-icon bg-icon-3">💳</div>
+        <div class="bg-icon bg-icon-4">⭐</div>
+        <div class="bg-icon bg-icon-5">🎉</div>
+        <div class="bg-icon bg-icon-6">💰</div>
+    </div>
+    
+    <div class="header">
+        <div class="aldi-logo">
+            <div class="aldi-emblem">A</div>
+            <div class="aldi-text">ALDI</div>
+        </div>
+        <div class="tagline">Simply Smarter Shopping</div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="container">
+        <div id="page1" class="page active">
+            <div class="progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+            </div>
+            
+            <h1>Get $750*</h1>
+            <h2>Towards shopping at ALDI</h2>
+            
+            <p class="question">How often do you shop at ALDI?</p>
+            
+            <div class="options">
+                <button class="option-btn" onclick="nextPage(2)">Once a week or more</button>
+                <button class="option-btn" onclick="nextPage(2)">2-3 times per month</button>
+                <button class="option-btn" onclick="nextPage(2)">Once a month</button>
+                <button class="option-btn" onclick="nextPage(2)">Less than once a month</button>
+            </div>
+            
+            <div class="social-proof">
+                <div class="avatars">
+                    <div class="avatar"></div>
+                    <div class="avatar"></div>
+                    <div class="avatar"></div>
+                </div>
+                <p class="social-text"><strong>3,500+ people</strong> earned through this program in the last 30 days</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="page2" class="page">
+            <div class="progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+            </div>
+            
+            <h1>Get $750*</h1>
+            <h2>Towards shopping at ALDI</h2>
+            
+            <p class="question">What do you typically purchase at ALDI?</p>
+            
+            <div class="options">
+                <button class="option-btn" onclick="nextPage(3)">Fresh Produce & Groceries</button>
+                <button class="option-btn" onclick="nextPage(3)">Private Label Brands</button>
+                <button class="option-btn" onclick="nextPage(3)">Weekly Finds & Specials</button>
+                <button class="option-btn" onclick="nextPage(3)">Organic & Healthy Options</button>
+                <button class="option-btn" onclick="nextPage(3)">Everything!</button>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="page3" class="page">
+            <div class="progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+            </div>
+            
+            <h1>Get $750*</h1>
+            <h2>Towards shopping at ALDI</h2>
+            
+            <p class="question">What do you love most about shopping at ALDI?</p>
+            
+            <div class="options">
+                <button class="option-btn" onclick="nextPage('loading')">Unbeatable Prices</button>
+                <button class="option-btn" onclick="nextPage('loading')">High Quality Products</button>
+                <button class="option-btn" onclick="nextPage('loading')">Quick Shopping Experience</button>
+                <button class="option-btn" onclick="nextPage('loading')">Exclusive Brands</button>
+            </div>
+        </div>
+
+        <!-- Loading/Qualification Page -->
+        <div id="page-loading" class="page">
+            <div class="loading-content">
+                <h2 style="margin-bottom: 40px;">Checking Your Eligibility...</h2>
+                
+                <div class="loading-steps">
+                    <div class="loading-step" id="step1">
+                        <div class="step-text">
+                            <span class="step-icon">📍</span>
+                            <span>Verifying zip code eligibility</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress1"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="loading-step" id="step2">
+                        <div class="step-text">
+                            <span class="step-icon">✓</span>
+                            <span>Confirming shopping preferences</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="loading-step" id="step3">
+                        <div class="step-text">
+                            <span class="step-icon">🎁</span>
+                            <span>Checking reward availability</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="loading-step" id="step4">
+                        <div class="step-text">
+                            <span class="step-icon">🔒</span>
+                            <span>Securing your qualification</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress4"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="color: #999; font-size: 14px; margin-top: 30px;">Please wait, this may take a few moments...</p>
+            </div>
+        </div>
+
+        <!-- Approval Page -->
+        <div id="page4" class="page">
+            <div class="approval-content">
+                <div class="checkmark">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                </div>
+                
+                <h1 class="congrats-title">Congratulations Serena Moore!</h1>
+                
+                <p class="approval-text">
+                    You have been approved for:
+                </p>
+                
+                <div class="gift-card">
+                    <div class="gift-card-shine"></div>
+                    <div class="gift-card-logo">
+                        <div class="gift-card-emblem">A</div>
+                        <div class="gift-card-logo-text">ALDI</div>
+                    </div>
+                    <div class="gift-card-amount">$750</div>
+                    <div class="gift-card-text">GIFT CARD</div>
+                    <div class="gift-card-sparkles">
+                        <span class="sparkle sparkle-1">✨</span>
+                        <span class="sparkle sparkle-2">✨</span>
+                        <span class="sparkle sparkle-3">✨</span>
+                    </div>
+                </div>
+                
+                <a href="https://hpkpn.ttrk.io/click" class="claim-btn">
+                    Claim Your Reward Now
+                </a>
+                
+                <div class="social-proof">
+                    <p class="social-text" style="font-size: 12px; color: #999;">
+                        *Upon completion of purchase & program requirements. Trade names or rights<br>
+                        associated with all brands on this site are the property of their respective owners<br>
+                        and are not affiliated with this promotion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(pageNumber) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the next page
+            if (pageNumber === 'loading') {
+                document.getElementById('page-loading').classList.add('active');
+                startLoadingSequence();
+            } else {
+                document.getElementById('page' + pageNumber).classList.add('active');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        function startLoadingSequence() {
+            const steps = [
+                { id: 'step1', progress: 'progress1', duration: 1500 },
+                { id: 'step2', progress: 'progress2', duration: 1200 },
+                { id: 'step3', progress: 'progress3', duration: 1400 },
+                { id: 'step4', progress: 'progress4', duration: 1600 }
+            ];
+            
+            let delay = 0;
+            
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    // Mark step as active
+                    document.getElementById(step.id).classList.add('active');
+                    
+                    // Fill progress bar
+                    setTimeout(() => {
+                        document.getElementById(step.progress).style.width = '100%';
+                    }, 100);
+                    
+                    // Mark as complete after duration
+                    setTimeout(() => {
+                        document.getElementById(step.id).classList.remove('active');
+                        document.getElementById(step.id).classList.add('complete');
+                        
+                        // If last step, go to approval page
+                        if (index === steps.length - 1) {
+                            setTimeout(() => {
+                                nextPage(4);
+                            }, 500);
+                        }
+                    }, step.duration);
+                }, delay);
+                
+                delay += step.duration;
+            });
+        }
+    </script>
+</body>
+</html>
