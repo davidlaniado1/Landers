@@ -17,6 +17,113 @@
             background: linear-gradient(180deg, #00a6ff 0%, #0088cc 100%);
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .bg-circle-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .bg-circle-2 {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: -80px;
+            animation-delay: 3s;
+        }
+        
+        .bg-circle-3 {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+        
+        .bg-circle-4 {
+            width: 250px;
+            height: 250px;
+            top: 30%;
+            right: 10%;
+            animation-delay: 9s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            25% { transform: translateY(-30px) translateX(20px); }
+            50% { transform: translateY(-10px) translateX(-20px); }
+            75% { transform: translateY(-40px) translateX(10px); }
+        }
+        
+        .bg-icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.1;
+            animation: floatIcon 15s infinite ease-in-out;
+        }
+        
+        .bg-icon-1 {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .bg-icon-2 {
+            top: 25%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .bg-icon-3 {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        .bg-icon-4 {
+            bottom: 30%;
+            right: 20%;
+            animation-delay: 6s;
+        }
+        
+        .bg-icon-5 {
+            top: 50%;
+            left: 5%;
+            animation-delay: 8s;
+        }
+        
+        .bg-icon-6 {
+            top: 70%;
+            right: 8%;
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(10deg); }
         }
         
         .header {
@@ -26,6 +133,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         
         .logo {
@@ -47,6 +156,8 @@
             padding: 40px 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         .page {
@@ -434,6 +545,19 @@
     </style>
 </head>
 <body>
+    <div class="background-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-circle bg-circle-3"></div>
+        <div class="bg-circle bg-circle-4"></div>
+        <div class="bg-icon bg-icon-1">🛒</div>
+        <div class="bg-icon bg-icon-2">🎁</div>
+        <div class="bg-icon bg-icon-3">💳</div>
+        <div class="bg-icon bg-icon-4">⭐</div>
+        <div class="bg-icon bg-icon-5">🎉</div>
+        <div class="bg-icon bg-icon-6">💰</div>
+    </div>
+    
     <div class="header">
         <div class="logo">
             <svg width="120" height="40" viewBox="0 0 120 40">
