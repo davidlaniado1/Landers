@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeshare Owners: You May Be Able to Cancel</title>
+    <script type="text/javascript" src="//hpkpn.ttrk.io/track.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            border-bottom: 3px solid #d32f2f;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .date {
+            color: #999;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 15px auto;
+            background: #fff;
+            padding: 25px 20px;
+        }
+        
+        .category {
+            color: #d32f2f;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+        
+        .big-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin: 25px 0;
+            line-height: 1.4;
+        }
+        
+        .box {
+            background: #fff3e0;
+            border-left: 5px solid #d32f2f;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .box p {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            background: #d32f2f;
+            color: #fff;
+            padding: 30px 25px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .cta-section p {
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #d32f2f;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .arrow {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            p {
+                font-size: 17px;
+            }
+            
+            .big-text {
+                font-size: 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 24px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NEWS TODAY</div>
+        <div class="date">November 17, 2025</div>
+    </div>
+    
+    <div class="container">
+        <div class="category">BREAKING NEWS</div>
+        
+        <h1>Stuck in a Timeshare? This Might Be Your Way Out</h1>
+        
+        <p>If you own a timeshare and want out, you're not alone. Thousands of owners are trapped paying fees that go up every year for something they don't even use anymore.</p>
+        
+        <p class="big-text">The good news? You might be able to cancel your timeshare contract completely.</p>
+        
+        <p>Most people think they're stuck forever. That's what the salesperson told you, right? But that's not always true.</p>
+        
+        <div class="box">
+            <p><strong>You might qualify to cancel if:</strong></p>
+            <p>• Your maintenance fees keep going up</p>
+            <p>• You can't book when you want</p>
+            <p>• You're not using it anymore</p>
+            <p>• You were pressured during the sale</p>
+            <p>• They made promises they didn't keep</p>
+        </div>
+        
+        <p>Here's the truth: Many timeshare sales involved pressure tactics and false promises. If that happened to you, you may have legal grounds to get out.</p>
+        
+        <p>This isn't about trying to sell your timeshare. (That almost never works anyway.) This is about canceling the contract completely.</p>
+        
+        <div class="cta-section">
+            <h2>See If You Can Cancel Your Timeshare</h2>
+            <p>Free case review - find out if you qualify</p>
+            <a href="https://hpkpn.ttrk.io/click" class="cta-button">Check Now<span class="arrow">→</span></a>
+        </div>
+        
+        <p>The process is simple: Experts review your contract and the sale. If you qualify, they work to get you out legally.</p>
+        
+        <p class="big-text">Stop paying for something you don't want.</p>
+        
+        <p>Many owners wish they had looked into this years ago. Don't wait another year watching those fees pile up.</p>
+        
+    </div>
+</body>
+</html>
