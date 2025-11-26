@@ -15,74 +15,46 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: #f5f5f5;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .breaking-banner {
             background: #c8102e;
             color: white;
-            padding: 8px 0;
+            padding: 10px 15px;
             text-align: center;
             font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
         }
         
         .header {
             background: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             border-bottom: 3px solid #0071ce;
         }
         
         .logo {
-            font-size: 32px;
+            font-size: 20px;
             font-weight: bold;
             color: #0071ce;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
         
         .tagline {
             color: #666;
-            font-size: 12px;
+            font-size: 11px;
         }
         
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 100%;
             background: white;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .headline {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-        
-        .subheadline {
-            font-size: 18px;
-            color: #c8102e;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .meta {
-            color: #666;
-            font-size: 13px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
         }
         
         .featured-image {
             width: 100%;
-            height: auto;
-            margin-bottom: 25px;
-            border-radius: 8px;
+            margin: 0;
             overflow: hidden;
         }
         
@@ -92,67 +64,99 @@
             display: block;
         }
         
+        .content-wrapper {
+            padding: 20px 15px;
+        }
+        
+        .headline {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .subheadline {
+            font-size: 16px;
+            color: #c8102e;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .meta {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
         .content {
             color: #333;
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 20px;
         }
         
         .content p {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
         
         .highlight-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 25px 0;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
         }
         
         .highlight-box h3 {
             color: #856404;
             margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 16px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 8px;
         }
         
         .cta-section {
             background: linear-gradient(135deg, #0071ce 0%, #004c91 100%);
             color: white;
-            padding: 40px;
+            padding: 25px 20px;
             text-align: center;
-            border-radius: 8px;
-            margin: 30px 0;
+            margin: 20px 0;
         }
         
         .cta-section h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 12px;
+            line-height: 1.2;
         }
         
         .cta-section p {
-            font-size: 18px;
-            margin-bottom: 25px;
+            font-size: 15px;
+            margin-bottom: 20px;
             opacity: 0.95;
         }
         
         .cta-button {
-            display: inline-block;
+            display: block;
             background: #ffc220;
             color: #004c91;
-            padding: 18px 50px;
-            font-size: 22px;
+            padding: 16px 30px;
+            font-size: 18px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             animation: pulse 2s infinite;
+            margin: 0 auto;
+            max-width: 320px;
         }
         
-        .cta-button:hover {
-            background: #ffcd39;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        .cta-button:active {
+            transform: scale(0.98);
         }
         
         @keyframes pulse {
@@ -163,33 +167,33 @@
         .timer {
             background: #c8102e;
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             margin: 20px 0;
-            border-radius: 8px;
         }
         
         .timer-text {
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 13px;
+            margin-bottom: 8px;
         }
         
         .countdown {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: bold;
             font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
         }
         
         .requirements {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 25px 0;
+            padding: 20px 15px;
+            margin: 20px 0;
         }
         
         .requirements h3 {
             color: #0071ce;
             margin-bottom: 15px;
+            font-size: 18px;
         }
         
         .requirements ul {
@@ -198,9 +202,10 @@
         }
         
         .requirements li {
-            padding: 8px 0;
+            padding: 10px 0;
             padding-left: 25px;
             position: relative;
+            font-size: 14px;
         }
         
         .requirements li::before {
@@ -209,141 +214,230 @@
             font-weight: bold;
             position: absolute;
             left: 0;
+            font-size: 16px;
         }
         
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 20px 15px;
             color: #666;
-            font-size: 12px;
+            font-size: 11px;
             background: #f8f9fa;
-            margin-top: 30px;
+            margin-top: 20px;
+            line-height: 1.6;
         }
         
-        @media (max-width: 768px) {
-            .container {
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .breaking-banner {
+                font-size: 14px;
+                padding: 12px 20px;
+            }
+            
+            .header {
                 padding: 20px;
-                margin: 10px;
             }
             
-            .headline {
-                font-size: 22px;
+            .logo {
+                font-size: 28px;
             }
             
-            .cta-section h2 {
-                font-size: 24px;
+            .tagline {
+                font-size: 12px;
             }
             
-            .cta-button {
-                padding: 15px 35px;
-                font-size: 18px;
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             }
             
             .featured-image {
-                height: auto;
-                font-size: 36px;
+                border-radius: 8px 8px 0 0;
             }
             
-            .featured-image img {
-                width: 100%;
-                height: auto;
+            .content-wrapper {
+                padding: 30px;
+            }
+            
+            .headline {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            
+            .content {
+                font-size: 16px;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+                margin: 25px 0;
+                font-size: 15px;
+            }
+            
+            .highlight-box h3 {
+                font-size: 18px;
+            }
+            
+            .cta-section {
+                padding: 40px;
+                margin: 30px 0;
+                border-radius: 8px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+            
+            .cta-section p {
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+            
+            .cta-button {
+                display: inline-block;
+                padding: 18px 50px;
+                font-size: 22px;
+            }
+            
+            .cta-button:hover {
+                background: #ffcd39;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            }
+            
+            .timer {
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 8px;
+            }
+            
+            .timer-text {
+                font-size: 14px;
+                margin-bottom: 10px;
             }
             
             .countdown {
-                font-size: 28px;
+                font-size: 36px;
+            }
+            
+            .requirements {
+                padding: 25px;
+                margin: 25px 0;
+                border-radius: 8px;
+            }
+            
+            .requirements li {
+                font-size: 15px;
+            }
+            
+            .footer {
+                font-size: 12px;
+                padding: 25px;
             }
         }
     </style>
 </head>
 <body>
     <div class="breaking-banner">
-        🔴 BREAKING NEWS - SETTLEMENT DISTRIBUTION NOW ACTIVE
+        🔴 BREAKING: SETTLEMENT DISTRIBUTION ACTIVE
     </div>
     
     <div class="header">
-        <div class="logo">CONSUMER NEWS DAILY</div>
-        <div class="tagline">Your Source for Consumer Rights & Class Action Settlements</div>
+        <div class="logo">CONSUMER NEWS</div>
+        <div class="tagline">Class Action Settlements & Consumer Rights</div>
     </div>
     
     <div class="container">
-        <div class="headline">
-            Walmart Customers Now Receiving $750 Gift Cards Following $45 Million Class Action Settlement
-        </div>
-        
-        <div class="subheadline">
-            Distribution Period Active: Eligible Customers Have Limited Time to Submit Claims
-        </div>
-        
-        <div class="meta">
-            Published: November 2025 | Updated: Today | Category: Consumer Rights
-        </div>
-        
         <div class="featured-image">
             <img src="https://i.ibb.co/V0Qf101z/53708660-41c4-4582-a8e1-a7e5975bfc48-1920x1080.jpg" alt="Walmart $750 Gift Card Settlement">
         </div>
         
-        <div class="content">
-            <p><strong>NATIONWIDE</strong> — Walmart customers across the United States are now eligible to receive $750 gift cards as part of a $45 million class action settlement that was recently finalized. The settlement stems from allegations regarding pricing discrepancies and promotional practices at Walmart stores nationwide.</p>
-            
-            <p>The lawsuit, which was filed on behalf of millions of Walmart shoppers, alleged that certain products were charged at higher prices than advertised, and that promotional offers were not always honored as presented. While Walmart has not admitted any wrongdoing, the retail giant agreed to the settlement to resolve the claims.</p>
-            
-            <div class="highlight-box">
-                <h3>⚖️ Settlement Details:</h3>
-                <p><strong>Total Settlement Fund:</strong> $45 Million</p>
-                <p><strong>Per-Claimant Distribution:</strong> Up to $750 in Walmart Gift Cards</p>
-                <p><strong>Eligible Parties:</strong> Customers who shopped at Walmart during the class period</p>
-                <p><strong>Claim Deadline:</strong> Limited time - Claims being processed on rolling basis</p>
+        <div class="content-wrapper">
+            <div class="headline">
+                Walmart Customers Receiving $750 Gift Cards From $45 Million Settlement
             </div>
             
-            <p>"This settlement ensures that affected Walmart customers receive fair compensation," said the claims administrator overseeing the distribution process. "We encourage all eligible consumers to submit their claims as soon as possible during this active distribution window."</p>
+            <div class="subheadline">
+                Active Distribution: Limited Time to Submit Claims
+            </div>
             
-            <p>The $750 gift card can be used for any purchases at Walmart stores nationwide or on Walmart.com, providing significant savings on groceries, household items, electronics, and more.</p>
-        </div>
-        
-        <div class="timer">
-            <div class="timer-text">⏰ CLAIM WINDOW CLOSES IN:</div>
-            <div class="countdown" id="countdown">14:27:33</div>
-        </div>
-        
-        <div class="cta-section">
-            <h2>Check Your Eligibility Now</h2>
-            <p>The claim process takes less than 2 minutes to complete</p>
-            <a href="https://hpkpn.ttrk.io/click" class="cta-button">CHECK IF YOU QUALIFY →</a>
-        </div>
-        
-        <div class="requirements">
-            <h3>How to Claim Your $750 Walmart Gift Card:</h3>
-            <ul>
-                <li>Click the eligibility check button above</li>
-                <li>Answer a few simple questions about your shopping history</li>
-                <li>Verify your contact information</li>
-                <li>Complete the claim submission process</li>
-                <li>Receive your $750 Walmart gift card upon approval</li>
-            </ul>
-        </div>
-        
-        <div class="content">
-            <p><strong>Important Note:</strong> This is a limited-time distribution period. The settlement fund is being distributed on a first-come, first-served basis during the active claim window. Claims submitted after the deadline or after funds are exhausted may not be processed.</p>
+            <div class="meta">
+                Published: November 2025 | Category: Consumer Rights
+            </div>
             
-            <p>Walmart has cooperated fully with the settlement process and has committed to reviewing its pricing and promotional practices to ensure transparency for customers moving forward.</p>
+            <div class="timer">
+                <div class="timer-text">⏰ CLAIM DEADLINE:</div>
+                <div class="countdown" id="countdown">14:27:33</div>
+            </div>
             
-            <p>For questions about eligibility or the claims process, consumers are encouraged to check their eligibility status using the link provided above. The entire process is designed to be simple and straightforward, with most claims being processed within minutes.</p>
-        </div>
-        
-        <div class="cta-section">
-            <h2>Don't Miss Out on Your $750</h2>
-            <p>Thousands of claims have already been approved</p>
-            <a href="https://hpkpn.ttrk.io/click" class="cta-button">CLAIM YOUR GIFT CARD NOW →</a>
+            <div class="cta-section">
+                <h2>Check Your Eligibility</h2>
+                <p>Takes less than 2 minutes</p>
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">CHECK IF YOU QUALIFY →</a>
+            </div>
+            
+            <div class="content">
+                <p><strong>NATIONWIDE</strong> — Walmart customers across the United States are now eligible to receive $750 gift cards as part of a $45 million class action settlement that was recently finalized.</p>
+                
+                <p>The settlement stems from allegations regarding pricing discrepancies and promotional practices at Walmart stores nationwide. While Walmart has not admitted any wrongdoing, the retail giant agreed to the settlement to resolve the claims.</p>
+                
+                <div class="highlight-box">
+                    <h3>⚖️ Settlement Details:</h3>
+                    <p><strong>Total Fund:</strong> $45 Million</p>
+                    <p><strong>Per-Claimant:</strong> Up to $750</p>
+                    <p><strong>Eligible:</strong> Walmart shoppers during class period</p>
+                    <p><strong>Deadline:</strong> Limited time remaining</p>
+                </div>
+                
+                <p>The lawsuit alleged that certain products were charged at higher prices than advertised, and that promotional offers were not always honored as presented.</p>
+                
+                <p>"This settlement ensures that affected Walmart customers receive fair compensation," said the claims administrator. "We encourage all eligible consumers to submit their claims during this active distribution window."</p>
+                
+                <p>The $750 gift card can be used for any purchases at Walmart stores nationwide or on Walmart.com.</p>
+            </div>
+            
+            <div class="requirements">
+                <h3>How to Claim Your $750:</h3>
+                <ul>
+                    <li>Click the eligibility button</li>
+                    <li>Answer simple questions</li>
+                    <li>Verify your information</li>
+                    <li>Submit your claim</li>
+                    <li>Receive your gift card</li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <p><strong>Important:</strong> This is a limited-time distribution period. The settlement fund is being distributed on a first-come, first-served basis. Claims submitted after the deadline or after funds are exhausted may not be processed.</p>
+                
+                <p>Walmart has cooperated fully with the settlement process and has committed to reviewing its pricing and promotional practices to ensure transparency for customers.</p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Don't Miss Your $750</h2>
+                <p>Thousands already approved</p>
+                <a href="https://hpkpn.ttrk.io/click" class="cta-button">CLAIM NOW →</a>
+            </div>
         </div>
     </div>
     
     <div class="footer">
-        <p><strong>Disclaimer:</strong> This is a promotional offer. Participation requires completion of sponsor requirements. Gift card distribution subject to verification and approval. This site is an advertisement and not affiliated with Walmart Inc. For official settlement information, consult legal counsel.</p>
-        <p style="margin-top: 10px;">© 2025 Consumer News Daily. All rights reserved.</p>
+        <p><strong>Disclaimer:</strong> This is a promotional offer. Participation requires completion of sponsor requirements. Gift card distribution subject to verification and approval. This site is an advertisement and not affiliated with Walmart Inc.</p>
+        <p>© 2025 Consumer News. All rights reserved.</p>
     </div>
     
     <script>
-        // Countdown timer
         function updateCountdown() {
             const countdownEl = document.getElementById('countdown');
             let timeString = countdownEl.textContent;
