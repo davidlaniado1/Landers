@@ -171,6 +171,63 @@
             font-size: 20px;
         }
         
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 40px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 5px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 35px;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #c00;
+        }
+        
+        .modal-content h2 {
+            color: #c00;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .modal-content h3 {
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .modal-content p {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
@@ -196,6 +253,12 @@
             .cta-button {
                 padding: 15px 35px;
                 font-size: 20px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+                margin: 20px auto;
             }
         }
     </style>
@@ -285,14 +348,117 @@
         
         <div style="background: #f9f9f9; padding: 25px; margin-top: 30px; border-top: 2px solid #ddd; font-size: 13px; color: #666; line-height: 1.8; text-align: center;">
             <p style="font-size: 14px; margin-bottom: 15px;">
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Advertorial Disclaimer</a> | 
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Privacy Policy</a> | 
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact Us</a>
+                <a href="#" onclick="openModal('disclaimerModal'); return false;" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Advertorial Disclaimer</a> | 
+                <a href="#" onclick="openModal('privacyModal'); return false;" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Privacy Policy</a> | 
+                <a href="#" onclick="openModal('contactModal'); return false;" style="color: #c00; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact Us</a>
             </p>
             <p style="font-size: 12px; color: #999;">
                 © 2025 Consumer Advocacy Network. All rights reserved.
             </p>
         </div>
     </div>
+
+    <!-- Advertorial Disclaimer Modal -->
+    <div id="disclaimerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('disclaimerModal')">&times;</span>
+            <h2>Advertorial Disclaimer</h2>
+            <p>This is an advertisement and not an actual news article, blog, or consumer protection update.</p>
+            
+            <h3>Nature of Content</h3>
+            <p>The story depicted on this site and the results mentioned are based on the experiences that some individuals have achieved. The results portrayed are illustrative and may not be typical. Individual results will vary based on personal circumstances, including but not limited to: the specific terms of your timeshare contract, how the timeshare was sold to you, applicable state laws, and your individual situation.</p>
+            
+            <h3>Compensation Disclosure</h3>
+            <p>This page may receive compensation for clicks on or purchase of products or services featured on this site. We may be compensated by third-party service providers when you engage with their services through links on this website.</p>
+            
+            <h3>Not Legal Advice</h3>
+            <p>The information provided on this website does not, and is not intended to, constitute legal advice. All information, content, and materials available on this site are for general informational purposes only. Readers should contact their attorney to obtain advice with respect to any particular legal matter.</p>
+            
+            <h3>No Guarantees</h3>
+            <p>No representation or guarantee is made that any particular result can or will be achieved. Success depends on numerous factors outside of our control.</p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> November 17, 2025</p>
+            
+            <h3>Information We Collect</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our services, when you participate in activities on the website, or otherwise when you contact us. The personal information we collect may include: name, email address, phone number, and information about your timeshare situation.</p>
+            
+            <h3>How We Use Your Information</h3>
+            <p>We use the information we collect or receive solely for the purpose of providing you with the services or information you request. This may include: responding to your inquiries, connecting you with service providers, sending you marketing communications (with your consent), and improving our website and services.</p>
+            
+            <h3>Sharing Your Information</h3>
+            <p>We do not sell, rent, or share your personal information with unaffiliated third parties except as necessary to provide the requested services or as required by law. We may share your information with trusted service providers who assist us in operating our website and conducting our business, provided those parties agree to keep this information confidential.</p>
+            
+            <h3>Data Security</h3>
+            <p>We use industry-standard security measures to protect your data from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+            
+            <h3>Your Rights</h3>
+            <p>You have the right to: access the personal information we hold about you, request correction of inaccurate information, request deletion of your personal information, object to or restrict processing of your information, and withdraw consent at any time where we rely on consent to process your information.</p>
+            
+            <h3>Contact Us</h3>
+            <p>To exercise any of these rights or if you have questions about this privacy policy, please contact us using the information provided in the Contact Us section.</p>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Information</h2>
+            
+            <h3>Consumer Advocacy Network</h3>
+            
+            <p><strong>Email:</strong><br>
+            General Inquiries: info@consumeradvocacynetwork.com<br>
+            Privacy Concerns: privacy@consumeradvocacynetwork.com<br>
+            Support: support@consumeradvocacynetwork.com</p>
+            
+            <p><strong>Phone:</strong><br>
+            Main Line: 1-800-555-0147<br>
+            Hours: Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+            
+            <p><strong>Mailing Address:</strong><br>
+            Consumer Advocacy Network<br>
+            1234 Consumer Protection Blvd, Suite 500<br>
+            Washington, DC 20001</p>
+            
+            <h3>What You Can Contact Us For:</h3>
+            <p>• Questions about our services<br>
+            • Privacy policy inquiries or to exercise your privacy rights<br>
+            • Request for information deletion or correction<br>
+            • General feedback or concerns<br>
+            • Media inquiries<br>
+            • Partnership opportunities</p>
+            
+            <h3>Response Time</h3>
+            <p>We strive to respond to all inquiries within 1-2 business days. For urgent privacy matters, please indicate "URGENT" in your subject line.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
 </body>
 </html>
