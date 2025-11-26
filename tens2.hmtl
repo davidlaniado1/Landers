@@ -283,15 +283,16 @@
             <strong>Disclaimer:</strong> This is a consumer information article. Individual results may vary. Consult with qualified professionals regarding your specific situation.
         </div>
         
-        <div style="background: #f9f9f9; padding: 25px; margin-top: 30px; border-top: 2px solid #ddd; font-size: 13px; color: #666; line-height: 1.8; text-align: center;">
-            <p style="font-size: 14px; margin-bottom: 15px;">
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px;">Advertorial Disclaimer</a> | 
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px;">Privacy Policy</a> | 
-                <a href="https://hpkpn.ttrk.io/click" style="color: #c00; text-decoration: none; margin: 0 15px;">Contact Us</a>
-            </p>
-            <p style="font-size: 12px; color: #999;">
-                © 2025 Consumer Advocacy Network. All rights reserved.
-            </p>
+        <div style="background: #f9f9f9; padding: 25px; margin-top: 30px; border-top: 2px solid #ddd; font-size: 13px; color: #666; line-height: 1.8;">
+            <p style="font-size: 14px; margin-bottom: 15px; text-align: left;"><strong>ADVERTORIAL DISCLAIMER:</strong> This is an advertisement and not an actual news article, blog, or consumer protection update. The story depicted on this site and the results mentioned are based on the experiences that some individuals have achieved. The results portrayed are illustrative and may not be typical. Individual results will vary based on personal circumstances. This page may receive compensation for clicks on or purchase of products or services featured on this site.</p>
+            
+            <p style="font-size: 14px; margin-bottom: 15px; text-align: left;"><strong>PRIVACY POLICY:</strong> We respect your privacy and are committed to protecting your personal information. Any information collected through this website will be used solely for the purpose of providing you with the services or information you request. We do not sell, rent, or share your personal information with unaffiliated third parties except as necessary to provide the requested services or as required by law. We use industry-standard security measures to protect your data. You may request access to, correction of, or deletion of your personal information at any time by contacting us.</p>
+            
+            <p style="font-size: 14px; margin-bottom: 10px; text-align: left;"><strong>CONTACT INFORMATION:</strong></p>
+            <p style="font-size: 13px; margin-bottom: 5px; text-align: left;">Consumer Advocacy Network</p>
+            <p style="font-size: 13px; margin-bottom: 5px; text-align: left;">Email: info@consumeradvocacynetwork.com</p>
+            <p style="font-size: 13px; margin-bottom: 5px; text-align: left;">Phone: 1-800-555-0147</p>
+            <p style="font-size: 13px; text-align: left;">For questions, concerns, or to exercise your privacy rights, please contact us using the information above.</p>
         </div>
     </div>
 </body>
