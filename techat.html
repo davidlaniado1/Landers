@@ -307,6 +307,8 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
     </style>
+
+<script src=//b-js.ringba.com/CAfa1ef8e8ba3346b58f81b2fb0b92b886 async></script>
 </head>
 <body>
     <div class="container">
@@ -338,7 +340,8 @@
                     { text: "No", value: "no", type: "no" }
                 ],
                 disqualifyOn: "no",
-                disqualifyMessage: "Unfortunately, our services are only available to current timeshare owners. If you acquire a timeshare in the future and need help exiting, please reach out to us!"
+                disqualifyMessage: "Unfortunately, our services are only available to current timeshare owners. If you acquire a timeshare in the future and need help exiting, please reach out to us!",
+                tagName: 'timeshare'
             },
             {
                 id: 'wantExit',
@@ -348,7 +351,8 @@
                     { text: "No", value: "no", type: "no" }
                 ],
                 disqualifyOn: "no",
-                disqualifyMessage: "No problem! If you change your mind about exiting your timeshare in the future, we're here to help. Feel free to reach out anytime."
+                disqualifyMessage: "No problem! If you change your mind about exiting your timeshare in the future, we're here to help. Feel free to reach out anytime.",
+                tagName: 'exit'
             },
             {
                 id: 'misled',
@@ -358,7 +362,8 @@
                     { text: "No", value: "no", type: "no" }
                 ],
                 disqualifyOn: "no",
-                disqualifyMessage: "While we specialize in cases involving misleading sales tactics, there may still be options available. We recommend speaking with a timeshare attorney to explore your specific situation."
+                disqualifyMessage: "While we specialize in cases involving misleading sales tactics, there may still be options available. We recommend speaking with a timeshare attorney to explore your specific situation.",
+                tagName: 'misled',
             }
         ];
         
@@ -436,7 +441,7 @@
             messageDiv.className = 'message-group';
             
             const optionsHTML = question.options.map(option => 
-                `<button class="option-btn ${option.type}" onclick="handleAnswer('${option.text}', '${option.value}', '${question.id}', '${option.type}')">${option.text}</button>`
+                `<button class="option-btn ${option.type}" onclick="handleAnswer('${option.text}', '${option.value}', '${question.id}', '${option.type}', '${question.tagName}')">${option.text}</button>`
             ).join('');
             
             messageDiv.innerHTML = `
@@ -456,13 +461,15 @@
             }, 50);
         }
         
-        function handleAnswer(text, value, questionId, type) {
+        function handleAnswer(text, value, questionId, type, tagName) {
             answers[questionId] = value;
             const question = questions[currentQuestion];
-            
+
             const optionsContainer = document.getElementById('options-' + questionId);
             optionsContainer.innerHTML = `<div class="user-response ${type}">${text}</div>`;
             
+            addTags(tagName, value);
+
             // Check if user should be disqualified
             if (question.disqualifyOn === value) {
                 setTimeout(() => {
@@ -486,6 +493,17 @@
                     }
                 }, 1800);
             }, 500);
+        }
+
+        function addTags(key, value) {
+            var newTag = {};
+            newTag[key] = value;
+
+             console.log("tag added");
+             console.log(newTag);
+             //window._rgba_tags.push(newTag);
+             (window._rgba_tags=window._rgba_tags||[]).push(newTag);
+             console.log(window._rgba_tags);
         }
         
         function showDisqualified(message) {
@@ -535,7 +553,7 @@
                 <div class="final-cta">
                     <h2>🎉 Congratulations, You Qualify!</h2>
                     <p>Call now to speak with a timeshare exit specialist:</p>
-                    <a href="https://hpkpn.ttrk.io/click" class="phone-number" style="text-decoration: none; cursor: pointer;">1-855-712-4580</a>
+                    <a href="tel: +18337870370" class="phone-number" style="text-decoration: none; cursor: pointer;">1-855-712-4580</a>
                 </div>
             `;
             chatArea.appendChild(ctaDiv);
